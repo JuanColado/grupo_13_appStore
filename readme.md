@@ -15,6 +15,6 @@ El proyecto a realizar es un Ecommerce enfocado en la venta de Software Digital.
 ### Integrantes
 
 * Pepe Alvarez : 
-* Martina Fumiere :
+* Martina Fumiere : Tengo 24 anios, me recibi de abogada hace poco, me gusta viajar y estar con amigos. Nada de conocimiento en programacion pero le pongo onda.
 * Juan Colado : Tengo 31 años, trabajo de contador, tengo algunos conocimientos previos de HTML, CSS y SQL. Prefiero mas la parte orientada al backend que al Frontend.
 * Cristian Pucciarelli : Tengo 33 años, me gustan los perros mas que a Pepe. Tengo conocimientos basicos de HTML y CSS. 
