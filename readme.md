@@ -14,7 +14,7 @@ El proyecto a realizar es un Ecommerce enfocado en la venta de Software Digital.
 
 ### Integrantes
 
-* Pepe Alvarez : Tengo 22 años, me gustan los perros. Tengo casi nada de conocimiento en programacion.
+* Pepe Alvarez : 
 * Martina Fumiere :
 * Juan Colado : Tengo 31 años, trabajo de contador, tengo algunos conocimientos previos de HTML, CSS y SQL. Prefiero mas la parte orientada al backend que al Frontend.
-* Cristian Pucciarelli : 
+* Cristian Pucciarelli : gohladsad
