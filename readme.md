@@ -17,4 +17,5 @@ El proyecto a realizar es un Ecommerce enfocado en la venta de Software Digital.
 * Pepe Alvarez : 
 * Martina Fumiere : Tengo 24 anios, me recibi de abogada hace poco, me gusta viajar y estar con amigos. Nada de conocimiento en programacion pero le pongo onda.
 * Juan Colado : Tengo 31 años, trabajo de contador, tengo algunos conocimientos previos de HTML, CSS y SQL. Prefiero mas la parte orientada al backend que al Frontend.
-* Cristian Pucciarelli : 
+* Cristian Pucciarelli : gohladsad
+#hola
