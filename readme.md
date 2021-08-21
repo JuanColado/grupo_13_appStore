@@ -6,11 +6,11 @@ El proyecto a realizar es un Ecommerce enfocado en la venta de Software Digital.
 
 ### Sitios de Referencia
 
-* dasda
-* softwarasde
-* softwsdare.
-* sasda
-* sdasdasd
+* https://www.kinguin.net/
+* https://www.hrkgame.com/es/
+* https://www.instant-gaming.com/es/
+* https://www.mtcgame.com/en-US
+* https://www.scdkey.com/
 
 ### Integrantes
 
