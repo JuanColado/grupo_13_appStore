@@ -12,6 +12,8 @@ El proyecto a realizar es un Ecommerce enfocado en la venta de Software Digital.
 * https://www.mtcgame.com/en-US
 * https://www.scdkey.com/
 
+### WireFrame Link
+
 ### Integrantes
 
 * Pepe Alvarez : Tengo 22 años, a mi me gustan mas los perros que a Cristian, poco conocimiento pero le pongo mas onda que Martina. Y soy fan de Marvel
