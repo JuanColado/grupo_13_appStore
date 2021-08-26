@@ -13,7 +13,6 @@ El proyecto a realizar es un Ecommerce enfocado en la venta de Software Digital.
 * https://www.scdkey.com/
 
 ### WireFrame Link
-hola
 
 ### Integrantes
 
