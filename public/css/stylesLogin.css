@@ -9,7 +9,7 @@
     margin: auto;
 }
 .buscador{
-    width: 60vw;
+    width: 40vw;
     display: inline-block;
     align-items: center;
     justify-content: center;
@@ -17,6 +17,7 @@
     border-radius: 50px;
     border: solid white 1px;
     padding: 15px;
+    height: auto;
 }
 nav {
     display: flex;
