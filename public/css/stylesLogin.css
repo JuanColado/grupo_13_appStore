@@ -10,11 +10,11 @@
     vertical-align: center;
 }
 .buscador{
-    width: 60vw;
+    width: 40vw;
     display: inline-block;
     align-items: center;
     justify-content: center;
-    height: 20vh;
+    height: auto;
 }
 nav {
     display: inline-block;
