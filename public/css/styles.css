@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+body {
+    background:red;
+}
+
+nav {
+    background: #606c88;  /* fallback for old browsers / background: -webkit-linear-gradient(to right, #3f4c6b, #606c88);  / Chrome 10-25, Safari 5.1-6 / background: linear-gradient(to right, #3f4c6b, #606c88); / W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 .bg-dark {
     background-color: white !important;
 }
@@ -18,10 +26,15 @@ i.fas.fa-bars {
 }
 
 nav ul li a {
+    list-style: none;
+    text-decoration: none;
     color: white;
     font-size: 1.4rem;
 }
 
+.nav-link {
+    color: white !important;
+}
 
 
 nav ul li {
@@ -45,16 +58,18 @@ nav ul li {
 }
 
 #buscador {
-    background-color: #343a40;
+    background: #606c88;  /* fallback for old browsers / background: -webkit-linear-gradient(to right, #3f4c6b, #606c88);  / Chrome 10-25, Safari 5.1-6 / background: linear-gradient(to right, #3f4c6b, #606c88); / W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border: none;
-    border-bottom: 1px solid #fdd900;
-    color: #fdd900;
+    border-bottom: 1px solid white;
+    color: white;
     text-align: center;
     font-size: 1.4rem;
     outline: none;
 }
 
-#buscador:focus {
+
+
+#buscador:focus ::placeholder{
     color: white;
 
 
