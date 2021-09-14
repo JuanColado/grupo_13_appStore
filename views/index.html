@@ -10,13 +10,50 @@
 </head>
 <body>
     <header><nav>
-        <img src="img/Logo.png">
-        <input type="search">
-        <ul><li><a href="index">Home</a></li>
-        <li><a href="productCart">Carrito</li></a>
-        <li><a href="login">Login</li></a>
-        <li><a href="register">Registrate aca</li></a>
-        </ul>
+      <header>
+
+        <nav class="navbar  navbar-expand-md bg-dark d-flex">
+            <div class="logoo">
+                <img src="img/logo.png" alt="logo de NHP Creaciones">
+            </div>
+
+            <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#desplega">
+                <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+            </button>
+
+
+            <div id="desplega" class="collapse navbar-collapse">
+                <div class="d-flex justify-content-center" id="buscado">
+                    <input type="search" class="search" id="buscador" placeholder="Buscar">
+                </div>
+
+                <div id="labarra">
+                    <ul class="navbar-nav container justify-content-around flex-nowrap">
+                        <li class="nav-item active"><a href="" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Tienda</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Ofertas</a></li>
+                        <li class="nav-item separa"><a href="" class="nav-link">
+                                <lord-icon src="https://cdn.lordicon.com/tdvuekwf.json" trigger="hover"
+                                    colors="primary:#ffffff,secondary:#fdd900" class="lordicon">
+                                </lord-icon>Registrarme
+                            </a>
+                        </li>
+                        <li class="nav-item"><a href="" class="nav-link">
+                                <lord-icon src="https://cdn.lordicon.com/zczmziog.json" trigger="hover"
+                                    colors="primary:#ffffff,secondary:#fdd900" class="lordicon">
+                                </lord-icon>Ingresar
+                            </a></li>
+
+                    </ul>
+                </div>
+            </div>
+
+
+
+
+        </nav>
+
+    </header>
     </nav></header>
     <section class="carousel center-aling">
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -67,8 +104,25 @@
 
 
 <footer>
- 
+ <div>
+   <p>Metodos de Pago:</p>
+   <img src="img/pagofacil.svg" alt="PagoFacil">
+   <img src="img/rapipago.svg" alt="rapipago">
+   <img src="img/visa.svg" alt="Visa">
+   <img src="img/mastercard.svg" alt="MasterCard">
+   <img src="img/paypal.svg" alt="paypal">
+ </div>
+ <div>
+   <img src="img/facelogo.webp" alt="Facebook">
+   <img src="img/instalogo.webp" alt="Instagram">
+   <img src="img/twitter logo.webp" alt="Twitter">
+ </div>
 
+ <div>
+   <p>Login</p>
+   <p>Register</p>
+   <p>Ver Carrito</p>
+ </div>
 </footer>
 
 
