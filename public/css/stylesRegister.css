@@ -1,102 +1,225 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    font-size: 1,3rem;
-    
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 1, 3rem;
 }
-header{
-    background-color: white; 
-    font-size: 2rem;
-}
-.logo{
-    width: 10%;
-    margin: auto;
-    vertical-align: center;
-}
-input .buscador{ 
-    background-color: rgba(255,255,255,0.1);
-    border-radius: 45px;
-    font-weight: bold;
-    width: 30vw;
-    letter-spacing: 1px;
-    justify-content: space-around;
-    margin-top: 1px;}
+/* nav {
+    background: #606c88;  /* fallback for old browsers / background: -webkit-linear-gradient(to right, #3f4c6b, #606c88);  / Chrome 10-25, Safari 5.1-6 / background: linear-gradient(to right, #3f4c6b, #606c88); / W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-input{
-    padding: 2%;
-    background-color: rgba(255,255,255,0.1);
-    border-radius: 50px;
-    font-weight: bold;
-    height: 50px;
-    width: 25vw;
-    letter-spacing: 1px;
-    justify-content: space-around;
-
-}
-nav{
-    background: #FC5C7D;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #6A82FB, #FC5C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    vertical-align: center;
+.bg-dark {
+  background-color: white !important;
 }
 
+i.fas.fa-bars {
+  color: red;
+}
+
+i.fas.fa-bars {
+  color: white;
+  font-size: 1.5rem;
+}
+
+nav ul li a {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+  font-size: 1.4rem;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+nav ul li {
+  text-align: center;
+  width: 100vw;
+  margin-top: 5px;
+}
+
+.lordicon {
+  display: none;
+}
+
+.logoo img {
+  flex-grow: 1;
+  padding: 5px 15px;
+  width: 100px;
+  height: auto;
+}
+
+#buscador {
+  background: #606c88; /* fallback for old browsers / background: -webkit-linear-gradient(to right, #3f4c6b, #606c88);  / Chrome 10-25, Safari 5.1-6 / background: linear-gradient(to right, #3f4c6b, #606c88); / W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+  text-align: center;
+  font-size: 1.4rem;
+  outline: none;
+}
+
+#buscador:focus ::placeholder {
+  color: white;
+}
+
+.navbar {
+  padding: 0 0 !important;
+}
+
+#desplega {
+  margin: auto;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  nav ul li a {
+    font-size: 1rem;
+  }
+
+  .lordicon {
+    display: inline-block;
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  #buscado {
+    width: 70%;
+    margin-top: 20px;
+  }
+
+  .separa {
+    border-left: 1px solid #fdd900;
+  }
+
+  #labarra {
+    width: 40vw;
+  }
+
+  #buscado input {
+    width: 70%;
+  }
+
+  nav {
+    flex-wrap: nowrap;
+  }
+
+  nav ul li a:hover {
+    color: #fdd900;
+  }
+}
+
+@media (min-width: 1200px) {
+}
+body {
+  background: linear-gradient(to bottom, #29323c, #485563);
+}
+.logo {
+  width: 10%;
+  margin: auto;
+  vertical-align: center;
+}
+input .buscador {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 45px;
+  font-weight: bold;
+  width: 30vw;
+  letter-spacing: 1px;
+  justify-content: space-around;
+  margin-top: 1px;
+}
+
+input {
+  padding: 2%;
+  background-color: rgba(255, 255, 255, 0.05);
+  font-weight: bold;
+  height: 50px;
+  width: 50vw;
+  letter-spacing: 1px;
+  justify-content: space-around;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: solid white 1px;
+}
 .formulario {
-    text-align: center;
-    font-size: 20px;
-    width: 60wv;
-    padding: 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  text-align: center;
+  font-size: 20px;
+  width: 60wv;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.formulario h4{
-    font-size: 3rem;
-    margin-bottom: 2px;
-    color:lightblue;
-    margin-top: 2px;
+.formulario h4 {
+  font-size: 2rem;
+  margin-bottom: 2px;
+  color: white;
+  margin-top: 2px;
 }
 .formulario div {
-    width: 60vw;
-    padding: 10px;
-    margin-bottom: 16px;
-    font-size: 20px;
+  width: 60vw;
+  padding: 10px;
+  margin-bottom: 16px;
+  font-size: 0.5rem;
 }
-.formulario .caja{
- font-size: 2rem;
- font-weight: 500;
+.formulario .caja {
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+}
+.formulario .caja input {
+  color: white;
+}
+::placeholder {
+  font-size: 0.6rem;
 }
 
-.boton{
-    background-color: lightblue;
-    border-radius: 50px;
-    height: 50px;
-    width: 25vw;
-    letter-spacing: 1px;
-    text-align: center;
-    box-shadow: 0px 0px 15px rgb(100, 100, 100);
-    font-size: 2rem;
-    padding:3%;
-    font-weight: bold;
+.boton {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  height: 50px;
+  width: 50vw;
+  letter-spacing: 1px;
+  justify-content: space-around;
 }
-.Provincia{
-    padding: 2%;
-    background-color: rgba(255,255,255,0.1);
-    border-radius: 50px;
-    font-weight: bold;
-    height: 50px;
-    width: 25vw;
-    letter-spacing: 1px;
-    justify-content: space-around;
-    font-size: 2rem;
-    font-weight: 500;}
+.Provincia {
+  padding: 2%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  font-weight: bold;
+  height: 50px;
+  width: 50vw;
+  letter-spacing: 1px;
+  justify-content: space-around;
+  font-size: 1rem;
+  font-weight: 500;
+}
 
-    .tenesCuenta{
-        font-size: 2rem;
-        font-weight: bold;
-    }
-    .tyc{
-        font-size: 2rem;
-    }
+.tenesCuenta {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.tenesCuenta a{
+    color: white;
+    font-size: 1rem;
+}
+.tyc {
+  font-size: 0.8rem;
+  display: flex;
+  color: white;
+  height: 15vh;
+  align-items: center;
+  width: 50vw;
+  flex-grow: 1;
+}
+.tyc span a {
+    color: white;
+}
+
+:visited{
+    color: white
+}
