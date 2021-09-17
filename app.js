@@ -16,3 +16,4 @@ app.get("/productDetail",function(req,res){
     res.sendFile((path.join(__dirname,'/views','/productDetail.html')))})
 app.get("/register",function(req,res){
     res.sendFile((path.join(__dirname,'/views','/register.html')))})
+
