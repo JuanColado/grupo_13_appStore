@@ -4,140 +4,291 @@
     box-sizing: border-box;
 }
 body {
- background: linear-gradient(to right, #3ca55c, #b5ac49);
+    background-color: #606c88;
 }
-
-nav {
-    background: #606c88;  /* fallback for old browsers / background: -webkit-linear-gradient(to right, #3f4c6b, #606c88);  / Chrome 10-25, Safari 5.1-6 / background: linear-gradient(to right, #3f4c6b, #606c88); / W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-.bg-dark {
-    background-color: white !important;
-}
-
-i.fas.fa-bars {
-    color: red;
-}
-
-i.fas.fa-bars {
+/*Aca empieza el header */
+header {
+    position: fixed;
+    width: 100vw;
+    z-index: 30;
+  }
+  
+  header nav {
+    background: rgba(96, 108, 136, 0.9) !important;
+    position: fixed;
+    z-index: 20;
+  }
+  
+  header .bg-dark {
+    background-color: rgba(96, 108, 136, 0.9) !important;
+    --bs-bg-opacity: 0.8;
+  }
+  
+  header i.fas.fa-bars {
     color: white;
     font-size: 1.5rem;
-}
-
-nav ul li a {
+  }
+  
+  header nav ul li a {
     list-style: none;
     text-decoration: none;
     color: white;
     font-size: 1.4rem;
-}
-
-.nav-link {
+  }
+  
+  header .nav-link {
     color: white !important;
-}
-
-
-nav ul li {
+  }
+  
+  header nav ul li {
     text-align: center;
     width: 100vw;
     margin-top: 5px;
-}
-
-.lordicon {
+  }
+  
+  header .lordicon {
     display: none;
-}
-
-
-.logoo img {
+  }
+  
+  header .logoo img {
     flex-grow: 1;
     padding: 5px 15px;
-    width:100px;
-    height:auto;
-}
-
-#buscador {
-    background: #606c88;  /* fallback for old browsers / background: -webkit-linear-gradient(to right, #3f4c6b, #606c88);  / Chrome 10-25, Safari 5.1-6 / background: linear-gradient(to right, #3f4c6b, #606c88); / W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 100px;
+    height: auto;
+  }
+  
+  header #buscador {
+    background: #606c88; /* fallback for old browsers / background: -webkit-linear-gradient(to right, #3f4c6b, #606c88);  / Chrome 10-25, Safari 5.1-6 / background: linear-gradient(to right, #3f4c6b, #606c88); / W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border: none;
     border-bottom: 1px solid white;
     color: white;
     text-align: center;
     font-size: 1.4rem;
     outline: none;
-}
-
-
-
-#buscador:focus ::placeholder{
+  }
+  
+  header #buscador:focus ::placeholder {
     color: white;
-
-
-}
-
-.navbar {
+  }
+  
+  header .navbar {
     padding: 0 0 !important;
-}
-
-#desplega {
+  }
+  
+  header #desplega {
     margin: auto;
     width: 100%;
-}
-
-
-
-@media (min-width: 768px) {
-
-
-
-
-
-
-
-
+  }
+  
+  .bg-dark {
+    background-color: white !important;
+  }
+  
+  i.fas.fa-bars {
+    color: red;
+  }
+  
+  i.fas.fa-bars {
+    color: white;
+    font-size: 1.5rem;
+  }
+  
+  nav ul li a {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
+  }
+  
+  .nav-link {
+    color: white !important;
+  }
+  
+  nav ul li {
+    text-align: center;
+    width: 100vw;
+    margin-top: 5px;
+  }
+  
+  .lordicon {
+    display: none;
+  }
+  
+  .logoo img {
+    flex-grow: 1;
+    padding: 5px 15px;
+    width: 100px;
+    height: auto;
+  }
+  
+  #buscador {
+    background: #606c88; /* fallback for old browsers / background: -webkit-linear-gradient(to right, #3f4c6b, #606c88);  / Chrome 10-25, Safari 5.1-6 / background: linear-gradient(to right, #3f4c6b, #606c88); / W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    text-align: center;
+    font-size: 1.4rem;
+    outline: none;
+  }
+  
+  #buscador:focus ::placeholder {
+    color: white;
+  }
+  
+  .navbar {
+    padding: 0 0 !important;
+  }
+  
+  #desplega {
+    margin: auto;
+    width: 100%;
+  }
+  @media (min-width: 768px) {
     nav ul li a {
-
-        font-size: 1rem;
-        ;
+      font-size: 1rem;
     }
-
+  
     .lordicon {
-        display: inline-block;
-        font-size: 1rem;
-        width: 100%;
-
+      display: inline-block;
+      font-size: 1rem;
+      width: 100%;
     }
-
+  
     #buscado {
-        width: 70%;
-        margin-top: 20px;
-        ;
-
+      width: 70%;
+      margin-top: 20px;
     }
-
+  
     .separa {
-        border-left: 1px solid #fdd900;
+      border-left: 1px solid #fdd900;
     }
-
+  
     #labarra {
-        width: 40vw;
+      width: 40vw;
     }
-
+  
     #buscado input {
-        width: 70%;
+      width: 70%;
     }
-
+  
     nav {
-        flex-wrap: nowrap;
+      flex-wrap: nowrap;
     }
-
+  
     nav ul li a:hover {
-        color: #fdd900;
+      color: #fdd900;
     }
-
+    header nav ul li a {
+  
+      font-size: 1rem;
+      ;
+  }
+  
+  header .lordicon {
+      display: inline-block;
+      font-size: 1rem;
+      width: 100%;
+  
+  }
+  
+  header #buscado {
+      width: 70%;
+      margin-top: 20px;
+      ;
+  
+  }
+  
+  header .separa {
+      border-left: 1px solid #fdd900;
+  }
+  
+  header #labarra {
+      width: 40vw;
+  }
+  
+  header #buscado input {
+      width: 70%;
+  }
+  
+  header nav {
+      flex-wrap: nowrap;
+  }
+  
+  header nav ul li a:hover {
+      color: #fdd900 !important;
+  }}
+  @media (min-width: 768px) {
+    nav ul li a {
+      font-size: 1rem;
+    }
+  
+    .lordicon {
+      display: inline-block;
+      font-size: 1rem;
+      width: 100%;
+    }
+  
+    #buscado {
+      width: 70%;
+      margin-top: 20px;
+    }
+  
+    .separa {
+      border-left: 1px solid #fdd900;
+    }
+  
+    #labarra {
+      width: 40vw;
+    }
+  
+    #buscado input {
+      width: 70%;
+    }
+  
+    nav {
+      flex-wrap: nowrap;
+    }
+  
+    nav ul li a:hover {
+      color: #fdd900;
+    }
+  }
+  /* Hasta aca el header */
+.producto{
+    padding-top: 15vh;
+    color: white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
-
-
-
-
-@media (min-width: 1200px) {
-
-    
+label {
+    color: white;
+}
+.BotonDetail__container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.BotonDetail button{
+    width: 40vw;
+    border-radius: 50px;
+    background-color: white;
+    margin: 5px;
+}
+.BotonDetail button a{
+    text-decoration: none;
+    color: black;
+}
+.BotonDetail button a:visited{
+    text-decoration: none;
+    color: black;
+}
+.Disponible{
+    color: greenyellow
+}
+.BotonDetail button:hover{
+  text-decoration: underline;
+  color: black;
 }
