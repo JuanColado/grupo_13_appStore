@@ -4,16 +4,95 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/stylesProductDetail.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <title>Detalle del Producto</title>
 </head>
 <body>
-</head>
-<body>     <img src="img/Logo.png">
-    <input type="search">
-    <ul><li><a href="index">Home</a></li>
-    <li><a href="productCart">Carrito</li></a>
-    <li><a href="login">Login</li></a>
-    </ul>
-</nav></header>
+  <header>
+    <nav class="navbar  navbar-expand-md  d-flex">
+        <div class="logoo">
+            <img src="img/Logo.png" alt="logo de NHP Creaciones">
+        </div>
+
+        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#desplega">
+            <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+        </button>
+
+
+        <div id="desplega" class="collapse navbar-collapse">
+            <div class="d-flex justify-content-center" id="buscado">
+                <input type="search" class="search" id="buscador" placeholder="Buscar">
+            </div>
+
+            <div id="labarra">
+                <ul class="navbar-nav container justify-content-around flex-nowrap">
+                    <li class="nav-item active"><a href="" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Tienda</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Ofertas</a></li>
+                    <li class="nav-item separa"><a href="" class="nav-link">
+                            <lord-icon src="https://cdn.lordicon.com/tdvuekwf.json" trigger="hover"
+                                colors="primary:#ffffff,secondary:#fdd900" class="lordicon">
+                            </lord-icon>Registrarme
+                        </a>
+                    </li>
+                    <li class="nav-item"><a href="" class="nav-link">
+                            <lord-icon src="https://cdn.lordicon.com/zczmziog.json" trigger="hover"
+                                colors="primary:#ffffff,secondary:#fdd900" class="lordicon">
+                            </lord-icon>Ingresar
+                        </a></li>
+
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+
+</header>
+<div class="producto">
+
+        <div class="fotoProducto">
+          <img src="img/FIFA_22.jpeg"alt= "PS4Fifa2022">
+        </div>
+        <div class="tituloProducto">
+            <h1 class="modelo"> FIFA 22 Edición Estándar para PS4 </h1>
+          </div>
+      <div class="Precio">
+        <label class="precio">Precio:</label> <span class="pesos">$9.000</span> 
+        </div>
+    <div class="Envio">Envio a todo el país</div>
+        <span class="stock">Stock </span><span class="Disponible">Disponible</span>
+        <div class="descripcionproducto"></div>
+        <ul><li>Plataforma: PS4</li>
+        <li>Género: Deportes</li>
+        <li>Jugadores: 1 - 22</li>
+        <li>Idioma: Español</li>
+        <li>Desarrollador: EA Sports</li></ul>
+        </div>
+        <label for="Cantidad">Cantidad: </label> <br>
+    <select  class= "Cantidad" name="Cantidad" >
+    <option value="1" selected>1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    </select>
+        <div class="ComprarAhora">    
+            <button type="button" class="ComprarAhora" value="Comprar ahora"><i class="fas fa-bolt">Comprar ahora</i></button>            
+          </div>    
+        <div class="Carrito">    
+            <button type="button" class="AgregarCarrito" value="Agregar al Carrito"><i class="fas fa-cart-plus">Agregar al Carrito</i></button>            
+          </div>    
+          <div class="Inicio">    
+           <button type="subtmit" class="VolverHome" value="VolverHome"><a href="index">Volver al inicio</a></button>           
+
+          </div>    
+          
+          <footer></footer>
 </body>
 </html>

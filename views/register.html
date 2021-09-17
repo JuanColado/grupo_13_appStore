@@ -12,14 +12,49 @@
 </head>
 <body>   
     <header>
-    <img class="logo" src="img/Logo.png">
-    <input type="search" class="buscador"><i class="fas fa-search"></i>
-    <ul class=""><li><a href="index.html">Home</a></li>
-    <li><a href="productCart.html">Carrito</li></a>
-    <li><a href="login.html">Login</li></a>
-    </ul>
-</header>
-<nav>
+
+        <nav class="navbar  navbar-expand-md  d-flex">
+            <div class="logoo">
+                <img src="img/Logo.png" alt="logo de NHP Creaciones">
+            </div>
+    
+            <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#desplega">
+                <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+            </button>
+    
+    
+            <div id="desplega" class="collapse navbar-collapse">
+                <div class="d-flex justify-content-center" id="buscado">
+                    <input type="search" class="search" id="buscador" placeholder="Buscar">
+                </div>
+    
+                <div id="labarra">
+                    <ul class="navbar-nav container justify-content-around flex-nowrap">
+                        <li class="nav-item active"><a href="" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Tienda</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Ofertas</a></li>
+                        <li class="nav-item separa"><a href="" class="nav-link">
+                                <lord-icon src="https://cdn.lordicon.com/tdvuekwf.json" trigger="hover"
+                                    colors="primary:#ffffff,secondary:#fdd900" class="lordicon">
+                                </lord-icon>Registrarme
+                            </a>
+                        </li>
+                        <li class="nav-item"><a href="" class="nav-link">
+                                <lord-icon src="https://cdn.lordicon.com/zczmziog.json" trigger="hover"
+                                    colors="primary:#ffffff,secondary:#fdd900" class="lordicon">
+                                </lord-icon>Ingresar
+                            </a></li>
+    
+                    </ul>
+                </div>
+            </div>
+    
+    
+    
+    
+        </nav>
+    
+    </header>
 <form class="formulario" action="/" method="POST">
     <h4>Crea una cuenta:</h4>
 <div class="caja"> 
@@ -53,7 +88,7 @@
     <label for="Provincia">Provincia </label> <br>
     <select  class= "Provincia" name="Provincia" placeholder="Seleccione su Provincia">
     <option value="Buenos Aires">Buenos Aires</option>
-    <option value="Buenos Aires Capital">Buenos Aires Capital</option>
+    <option value="Ciudad Autónoma de Buenos Aires">Ciudad Autónoma de Buenos Aires</option>
     <option value="Catamarca">Catamarca</option>
     <option value="Chaco">Chaco</option>
     <option value="Chubut">Chubut</option>
@@ -77,11 +112,9 @@
     <option value="Tierra del Fuego">Tierra del Fuego</option>
     <option value="Tucuman">Tucuman</option>
     </select> </div>
-<div class="tyc"><label> Aceptas nuestros <a href="#"> Terminos y Condiciones, política de datos y política de cookies.</a></a></label>
-    <br><input type="radio" name="Aceptas"></div>
+    <label class="tyc"><span>Al registrarte estas aceptando nuestros <a href="#"> Terminos y Condiciones, política de datos y política de cookies.</a></span></label>
 <div> <input class="boton" type="submit" value="Registrate!"></div>
 <div class="tenesCuenta"> <a href="Login"> ¿Ya tienes una cuenta?</a></div>
 </form>
-</nav>
 </body>
 </html>
