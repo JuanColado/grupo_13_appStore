@@ -111,12 +111,13 @@ header #desplega {
     text-align: center;
     margin-top: 20px;
     border-top: 2px solid rgb(255, 255, 255);
+    padding-bottom: 20px;
 }
 .redes img{
     width: 15vw;
     height: 15vw;
     text-align: center;
-    margin-left: 4px;
+    margin-left: 4px;   
     margin-top: 25px;
 
 }
@@ -158,6 +159,15 @@ header #desplega {
      font-size: 3rem;
      color: darkslategray;
      
+ }
+
+
+ .botones{
+     color: white;
+     position: relative;
+     margin-top: 100px;
+     white-space: unset;
+     margin-bottom: -40px;
  }
 
  footer{

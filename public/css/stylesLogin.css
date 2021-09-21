@@ -11,7 +11,7 @@ header {
   }
   
   header nav {
-    background: rgba(96, 108, 136, 0.9) !important;
+    background: rgba(96, 108, 136, 0.5) !important;
     position: fixed;
     z-index: 20;
   }
@@ -214,6 +214,42 @@ header {
   header nav ul li a:hover {
       color: #fdd900 !important;
   }}
+
+
+
+  .pagos{
+    width: 100vw;
+    text-align: center;
+    background-color: #606c88;
+    padding-top: 30px;
+}
+.pagos img{
+    width: 15vw;
+    height: 15vw;
+    text-align: center;
+}
+
+.redes{
+    width: 100vw;
+    text-align: center;
+    margin-top: 20px;
+    border-top: 2px solid rgb(255, 255, 255);
+    padding-bottom: 20px;
+}
+.redes img{
+    width: 15vw;
+    height: 15vw;
+    text-align: center;
+    margin-left: 4px;
+    margin-top: 25px;
+
+}
+
+
+
+
+
+
   @media (min-width: 768px) {
     nav ul li a {
       font-size: 1rem;
@@ -338,13 +374,15 @@ section ul li{
     font-size: 1rem;
     margin: 1rem;
     background-color: #3b5998;
-    height: 7.5vh;
+    height: 7.5vh;  
     width: 50vw;
 }
+
 .fa-facebook{
     background-color: #3b5998;
     width: 2.5vw;
     font-size: 1.8rem;
+    padding-right: 45px;
 }
 .Google{
     border: solid 1px #3b5998;

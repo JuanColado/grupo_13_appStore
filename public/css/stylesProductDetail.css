@@ -217,6 +217,36 @@ header {
   header nav ul li a:hover {
       color: #fdd900 !important;
   }}
+
+
+  .pagos{
+    width: 100vw;
+    text-align: center;
+    margin-top:40px ;
+}
+.pagos img{
+    width: 15vw;
+    height: 15vw;
+    text-align: center;
+}
+
+.redes{
+    width: 100vw;
+    text-align: center;
+    margin-top: 20px;
+    border-top: 2px solid rgb(255, 255, 255);
+    padding-bottom: 20px;
+}
+.redes img{
+    width: 15vw;
+    height: 15vw;
+    text-align: center;
+    margin-left: 4px;
+    margin-top: 25px;
+
+}
+
+
   @media (min-width: 768px) {
     nav ul li a {
       font-size: 1rem;
