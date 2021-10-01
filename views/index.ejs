@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
+<!-- <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,10 +15,11 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css">
     <title>Document</title>
-</head>
-
+</head> -->
+<%- include('./partials/head') %>
 <body>
-    <header>
+  <%- include('./partials/header') %>
+    <!-- <header>
 
         <nav class="navbar  navbar-expand-md bg-dark d-flex">
             <div class="logoo">
@@ -56,12 +57,9 @@
                 </div>
             </div>
 
-
-
-
         </nav>
 
-    </header>
+    </header> -->
     <main>
         <div class="contenedor-main">
            <a href="#"> <img class="img-fluid imagen-main" src="img/BATTLEFIELD_2042.jpg" alt="Battlefield 2042"></a>
@@ -249,7 +247,7 @@
         
 
     </main>
-    <footer>
+    <!-- <footer>
 <div class="pagos">
     <img src="img/mastercard.svg" alt="mastercard">
     <img src="img/pagofacil.svg" alt="pagofacil">
@@ -264,8 +262,8 @@
     <a href="#"><img src="img/imgbin_twitter-png.png" alt="Twitter"></a>
 </div>
 
-
-    </footer>
+    </footer> -->
+    <%- include('./partials/footer') %>
 </body>
 
 </html>
