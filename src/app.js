@@ -1,4 +1,3 @@
-
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -22,3 +21,11 @@ app.get("/productCart", productsRouter);
 app.get("/productDetail", productsRouter);
 
 app.get("/register",usersRouter);
+
+app.get('/editProduct', (req,res) => {
+    res.render(path.resolve(__dirname, 'views/editProduct.ejs'));
+    });
+
+app.get('/newProduct', (req,res) => {
+    res.render(path.resolve(__dirname, 'views/newProduct.ejs'));
+        });
