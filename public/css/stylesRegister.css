@@ -244,93 +244,9 @@ header nav {
 header nav ul li a:hover {
     color: #fdd900 !important;
 }
-/* Hasta aca el header */
-}
-body {
-    background:#606c88;
+
 }
 
-input {
-  padding: 2%;
-  background-color: rgba(255, 255, 255, 0.05);
-  font-weight: bold;
-  height: 50px;
-  width: 50vw;
-  letter-spacing: 1px;
-  justify-content: space-around;
-  border-top: none;
-  border-right: none;
-  border-left: none;
-  border-bottom: solid white 1px;
-  
-}
-.formulario {
-  text-align: center;
-  font-size: 0.5rem;
-  width: 100vw;
-  padding: 5%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.formulario h4 {
-  font-size: 2rem;
-  margin-bottom: 2px;
-  color: white;
-  margin-top: 2px;
-}
-.formulario div {
-  width: 60vw;
-  padding: 10px;
-  margin-bottom: 16px;
-  font-size: 1rem;
-}
-.formulario .caja {
-  font-size: 1.3rem;
-  font-weight: 500;
-  color: white;
-}
-
-.boton {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 50px;
-  height: 10vh;
-  width: 50vw;
-  letter-spacing: 1px;
-  text-align: center;
-  box-shadow: 0px 0px 15px rgba(5, 7, 151, 0.1);
-  font-size: 2rem;
-  font-weight: bold;
-  justify-content: center;
-}
-.Provincia {
-  padding: 2%;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 50px;
-  font-weight: bold;
-  height: 50px;
-  width: 50vw;
-  letter-spacing: 1px;
-  justify-content: space-around;
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-.tenesCuenta {
-  font-size: 2rem;
-  font-weight: bold;
-}
-:visited{
-  color: white;
-}
-.tyc {
-  font-size: 1rem;
-  color: white;
-}
-form h4{
-  padding-top: 100px;
- }
 nav {
   background: #606c88; /* fallback for old browsers / background: -webkit-linear-gradient(to right, #3f4c6b, #606c88);  / Chrome 10-25, Safari 5.1-6 / background: linear-gradient(to right, #3f4c6b, #606c88); / W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
@@ -440,3 +356,137 @@ nav ul li {
 
 @media (min-width: 1200px) {
 }
+
+ /* Hasta aca el header */
+
+/* empieza register */
+
+body {
+  background:#606c88;
+}
+
+input {
+padding: 2%;
+background-color: rgba(255, 255, 255, 0.05);
+font-weight: bold;
+height: 50px;
+width: 50vw;
+letter-spacing: 1px;
+justify-content: space-around;
+border-top: none;
+border-right: none;
+border-left: none;
+border-bottom: solid white 1px;
+
+}
+.formulario {
+text-align: center;
+font-size: 0.5rem;
+width: 100vw;
+padding: 5%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.formulario h4 {
+font-size: 2rem;
+margin-bottom: 2px;
+color: white;
+margin-top: 2px;
+}
+.formulario div {
+width: 60vw;
+padding: 10px;
+margin-bottom: 16px;
+font-size: 1rem;
+}
+.formulario .caja {
+font-size: 1.3rem;
+font-weight: 500;
+color: white;
+}
+
+.boton {
+background-color: rgba(255, 255, 255, 0.1);
+border-radius: 50px;
+height: 10vh;
+width: 50vw;
+letter-spacing: 1px;
+text-align: center;
+box-shadow: 0px 0px 15px rgba(5, 7, 151, 0.1);
+font-size: 2rem;
+font-weight: bold;
+justify-content: center;
+}
+.Provincia {
+padding: 2%;
+background-color: rgba(255, 255, 255, 0.1);
+border-radius: 50px;
+font-weight: bold;
+height: 50px;
+width: 50vw;
+letter-spacing: 1px;
+justify-content: space-around;
+font-size: 1rem;
+font-weight: 500;
+}
+
+.tenesCuenta {
+font-size: 2rem;
+font-weight: bold;
+}
+:visited{
+color: white;
+}
+.tyc {
+font-size: 1rem;
+color: white;
+}
+form h4{
+padding-top: 100px;
+}
+
+/* termina register */
+
+
+/* empieza edit y new product */
+.StockDisponible{
+  padding: 2%;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.1);
+  font-weight: bold;
+  height: 50px;
+  width: 50vw;
+  letter-spacing: 1px;
+  justify-content: space-around;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.cajaDescripcion{
+padding: 2%;
+text-align: center;
+background-color: rgba(255, 255, 255, 0.1);
+font-weight: bold;
+height: 90px;
+width: 50vw;
+letter-spacing: 1px;
+justify-content: space-around;
+font-size: 1rem;
+font-weight: 500;
+}
+.botonEditProduct {
+background-color: rgba(255, 255, 255, 0.1);
+border-radius: 50px;
+height: 10vh;
+width: 50vw;
+letter-spacing: 1px;
+text-align: center;
+box-shadow: 0px 0px 15px rgba(5, 7, 151, 0.1);
+font-size: 1.3rem;
+font-weight: bold;
+justify-content: center;
+}
+/* termina edit y new product */
