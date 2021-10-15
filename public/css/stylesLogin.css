@@ -4,6 +4,7 @@
     padding: 0px;
     background-color: #606c88;
 }
+/* empieza header */
 header {
     position: fixed;
     width: 100vw;
@@ -286,6 +287,11 @@ header {
       color: #fdd900;
     }
   }
+/* 
+  Hasta aca el header */
+
+
+  /* Aca el login */
 .login input {
     border-bottom: solid white 2px;
     border-left: 0px;
@@ -409,3 +415,4 @@ section ul li{
     justify-content: space-evenly;
 }
 
+/* Hasta aca login */

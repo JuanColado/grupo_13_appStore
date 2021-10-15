@@ -1,67 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Document</title>
-</head>
-
+<%- include('./partials/head') %>
 <body>
-    <header>
-
-        <nav class="navbar  navbar-expand-md bg-dark d-flex">
-            <div class="logoo">
-              <a href="index">  <img src="img/Logo.png" alt="logo de NHP Creaciones"></a>
-            </div>
-
-            <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#desplega">
-                <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
-            </button>
-
-
-            <div id="desplega" class="collapse navbar-collapse">
-                <div class="d-flex justify-content-center" id="buscado">
-                    <input type="search" class="search" id="buscador" placeholder="Buscar">
-                </div>
-
-                <div id="labarra">
-                    <ul class="navbar-nav container justify-content-around flex-nowrap">
-                        <li class="nav-item active"><a href="index" class="nav-link">Home</a></li>
-                        <li class="nav-item"><a href="" class="nav-link">Tienda</a></li>
-                        <li class="nav-item"><a href="" class="nav-link">Ofertas</a></li>
-                        <li class="nav-item separa"><a href="register" class="nav-link">
-                                <lord-icon src="https://cdn.lordicon.com/tdvuekwf.json" trigger="hover"
-                                    colors="primary:#ffffff,secondary:#fdd900" class="lordicon">
-                                </lord-icon>Registrarme
-                            </a>
-                        </li>
-                        <li class="nav-item"><a href="login" class="nav-link">
-                                <lord-icon src="https://cdn.lordicon.com/zczmziog.json" trigger="hover"
-                                    colors="primary:#ffffff,secondary:#fdd900" class="lordicon">
-                                </lord-icon>Ingresar
-                            </a></li>
-
-                    </ul>
-                </div>
-            </div>
-
-
-
-
-        </nav>
-
-    </header>
+  <%- include('./partials/header') %>
+    
     <main>
         <div class="contenedor-main">
            <a href="#"> <img class="img-fluid imagen-main" src="img/BATTLEFIELD_2042.jpg" alt="Battlefield 2042"></a>
@@ -247,25 +190,8 @@
             <a href="productCart"><i class="fas fa-shopping-cart"></i></a>
         </div>
         
-
     </main>
-    <footer>
-<div class="pagos">
-    <img src="img/mastercard.svg" alt="mastercard">
-    <img src="img/pagofacil.svg" alt="pagofacil">
-    <img src="img/paypal.svg" alt="paypal">
-    <img src="img/visa.svg" alt="visa">
-    <img src="img/rapipago.svg" alt="rapipago">
-</div>
-
-<div class="redes">
-    <a href="#"><img src="img/600px-Facebook_Logo_(2019).png" alt="Facebook"></a>
-    <a href="#"><img src="img/imgbin_youtube-transimperial-ooo-likeservice24-facebook-png.png" alt="intagram"></a>
-    <a href="#"><img src="img/imgbin_twitter-png.png" alt="Twitter"></a>
-</div>
-
-
-    </footer>
+    <%- include('./partials/footer') %>
 </body>
 
 </html>
