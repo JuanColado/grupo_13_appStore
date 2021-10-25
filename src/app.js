@@ -11,21 +11,8 @@ app.set("view engine", "ejs");
 
 app.listen(3050,console.log("Esta corriendo en el puerto 3050"));
 
-app.get("/", mainRouter);
+app.use("/", mainRouter);
 
-app.get("/index",mainRouter);
-app.get("/login", usersRouter);
+app.use("/users", usersRouter);
 
-app.get("/productCart", productsRouter);
-
-app.get("/productDetail", productsRouter);
-
-app.get("/register",usersRouter);
-
-app.get('/editProduct', (req,res) => {
-    res.render(path.resolve(__dirname, 'views/editProduct.ejs'));
-    });
-
-app.get('/newProduct', (req,res) => {
-    res.render(path.resolve(__dirname, 'views/newProduct.ejs'));
-        });
+app.use("/products", productsRouter);
