@@ -1,9 +1,9 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const mainRouter =  require ('../src/views/routes/mainRouter');
-const usersRouter =  require ('../src/views/routes/usersRouter');
-const productsRouter =  require ('../src/views/routes/productsRouter');
+const mainRouter =  require ('../src/routes/mainRouter');
+const usersRouter =  require ('../src/routes/usersRouter');
+const productsRouter =  require ('../src/routes/productsRouter');
 
 app.use(express.static("../public"));
 
