@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es"></html>
+    <%- include('./partials/head') %>
+    <body>
+      <%- include('./partials/header') %>
+<div class="producto">
+
+        <div class="fotoProducto">
+          <img src="img/FIFA_22.jpeg"alt= "PS4Fifa2022">
+        </div>
+        <div class="tituloProducto">
+            <h1 class="modelo"> FIFA </h1>
+          </div>
+      <div class="Precio">
+        <label class="precio" name="price">Precio</label> <span class="pesos">6000
+        </span>
+        </div>
+    <div class="Envio">Envio a todo el mundo</div>
+        <span class="stock">Stock <span class="Disponible">Disponible</span></span>
+        <div class="descripcionproducto"></div>
+        <ul><li>Plataforma: PS4</li>
+        <li>Género: Deportes</li>
+        <li>Jugadores: 1 - 22</li>
+        <li>Idioma: Español</li>
+        <li>Desarrollador: EA Sports</li></ul>
+        <label for="Cantidad">Cantidad: <select  class= "Cantidad" name="Cantidad" >
+    <option value="1" selected>1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    </select></label>  </div>
+    <div class="BotonDetail__container">
+        <div class="BotonDetail">    
+            <button type="button" class="ComprarAhora" value="Comprar ahora"><i class="fas fa-bolt"></i><a href="productCart">Comprar ahora</a></button>            
+          </div>    
+        <div class="BotonDetail">    
+            <button type="button" class="AgregarCarrito" value="Agregar al Carrito"><i class="fas fa-cart-plus"></i><a href="#">Agregar al Carrito</a></button>            
+          </div>    
+          <div class="BotonDetail">    
+           <button type="subtmit" class="VolverHome" value="VolverHome"><i class="fas fa-home"></i><a href="index">Volver al inicio</a></button>           
+          </div> </div>   
+
+          
+          <%- include('./partials/footer') %>
+</body>
+</html>
