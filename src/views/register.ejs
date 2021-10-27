@@ -7,35 +7,37 @@
 <form class="formulario" action="/" method="POST">
     <h4>Crea una cuenta:</h4>
 <div class="caja"> 
-    <label for="NombreApellido"> Nombre Apellido</label><br><input type="text" name= "NombreApellido" placeholder= "Ingrese su nombre completo">
+    <label for="NombreApellido"> Complete name </label><br><input type="text" name= "NombreApellido" placeholder= "Insert your name">
 </div>
 <div class="caja"> 
-    <label for="Email">Email</label><br><input type="email" name="Email" id= "Email" placeholder="Ingrese su Email">
+    <label for="Email">Email</label><br><input type="email" name="Email" id= "Email" placeholder="Insert your email">
 </div>
 <div class="caja"> 
-    <label for="password"> Contraseña</label><br><input type="password" name="password" id ="pasword" placeholder="Ingrese su contraseña">
+    <label for="password"> Password</label><br><input type="password" name="password" id ="pasword" placeholder="Insert your password">
 </div>
 <div class="caja"> 
-    <label for="password"> Repita su contraseña</label> <br><input type="password" name="password" id="password" placeholder="Repita su contrasena">
+    <label for="password"> Repite your password</label> <br><input type="password" name="password" id="password" placeholder= "Repeat your password">
 </div>
 <div class="caja"> 
-    <label for="Telefono">Teléfono </label><br><input type="tel" name="Telefono" id="Telefono"placeholder= "Ingrese su numero telefonico">
+    <label for="Telefono">Telephone </label><br><input type="tel" name="Telefono" id="Telefono"placeholder= "Insert your phone number">
 </div>
 <div class="caja"> 
-    <label for="Direccion"> Dirección</label><br><input type="text" name="Direccion" id="Direccion" placeholder= "Ingrese su Dirección">
+    <label for="Direccion"> Direction</label><br><input type="text" name="Direccion" id="Direccion" placeholder= "Insert your adress">
 </div>
 <div class="caja"> 
-    <label for="Piso">Piso/Depto </label><br><input type="text" name="Piso" id="Piso"placeholder= "Ingrese su Piso">
+    <label for="Piso">Floor </label><br><input type="text" name="Piso" id="Piso"placeholder= "Insert your floor">
 </div>
 <div class="caja"> 
-    <label for="CP"> Código postal</label><br><input type="text" name="CP" id="CP"placeholder= "Ingrese su Codigo Postal">
+    <label for="CP"> Zip code</label><br><input type="text" name="CP" id="CP"placeholder= "Insert your zip code">
 </div>
 <div class="caja"> 
-    <label for="Localidad"> Localidad</label><br><input type="text" name="Localidad" id="Localidad" placeholder= "Ingrese su Localidad"> 
+    <label for="Localidad"> City</label><br><input type="text" name="Localidad" id="Localidad" placeholder= "Insert your city"> 
 </div>
-<div class="caja"> 
-    <label for="Provincia">Provincia </label> <br>
-    <select  class= "Provincia" name="Provincia" placeholder="Seleccione su Provincia">
+<label for="country"> Country</label><br><input type="text" name="Country" id="Localidad" placeholder= "Insert your country"> 
+</div>
+<!-- <div class="caja"> 
+    <label for="Provincia">State </label> <br>
+    <select  class= "Provincia" name="Provincia" placeholder="Select your state">
     <option value="Buenos Aires">Buenos Aires</option>
     <option value="Ciudad Autónoma de Buenos Aires">Ciudad Autónoma de Buenos Aires</option>
     <option value="Catamarca">Catamarca</option>
@@ -60,10 +62,10 @@
     <option value="Santiago del Estero">Santiago del Estero</option>
     <option value="Tierra del Fuego">Tierra del Fuego</option>
     <option value="Tucuman">Tucuman</option>
-    </select> </div>
-    <label class="tyc"><span>Al registrarte estas aceptando nuestros <a href="#"> Terminos y Condiciones, política de datos y política de cookies.</a></span></label>
-<div> <input class="boton" type="submit" value="Registrate!"></div>
-<div class="tenesCuenta"> <a href="Login"> ¿Ya tienes una cuenta?</a></div>
+    </select> </div> -->
+    <label class="tyc"><span>By logging in to your account, you agree to our <a href="#"> Terms and Conditions and policy of cookies.</a></span></label>
+<div> <input class="boton" type="submit" value="Register!"></div>
+<div class="tenesCuenta"> <a href="Login"> ¿Already a user?</a></div>
 </form>
 <%- include('./partials/footer') %>
 </body>

@@ -6,29 +6,31 @@
 
 
 <form class="formulario" action="/products" method="POST">
-    <h4><i class="fas fa-user-plus"></i>Agregar un producto:</h4>
+    <h4><i class="fas fa-user-plus"></i>Add product:</h4>
 <div class="caja"> 
-    <label for="NombreProducto"> Nombre del producto:</label><br><input type="text" name= "Name" placeholder= "Inserte el nombre del producto">
+    <label for="NombreProducto"> Product name:</label><br><input type="text" name= "Name" placeholder= "Insert product name">
 </div>
 <div class="caja"> 
-    <label for="precio">Precio del producto:</label><br><input type="text" name="price" id= "precio" placeholder="Inserte el precio del producto">
+    <label for="precio">Product price:</label><br><input type="text" name="price" id= "precio" placeholder="Insert product price">
 </div>
-<div class="caja"> 
-    <label> Categoria: </label> <input type="text" name="category">
-</div>
-<div class="caja"> 
-    <label> Imagen del producto: </label> <input type="file" name="image" accept=".jpg">
-</div>
-<div class="caja"> <label for="Stock" class= "Stock" name="stock" ></label>Stock del producto: 
+<div class="caja"> <label for="Stock" class= "Stock" name="category" ></label>Product category: 
     <br>
- <select class="StockDisponible"> <option value="Disponible" selected>Disponible</option>
-    <option value="No Disponible">No disponible</option>
-    </select></label>  </div>
+ <select class="StockDisponible"> <option value="Disponible" >Games</option>
+    <option value="No Disponible">Software</option>
+    </select> </div>
+<div class="caja"> 
+    <label> Product image: </label> <input type="file" name="image" accept=".jpg">
+</div>
+<div class="caja"> <label for="Stock" class= "Stock" name="stock" ></label>Stock: 
+    <br>
+ <select class="StockDisponible"> <option value="Disponible" >Available</option>
+    <option value="No Disponible">Unavailable</option>
+    </select> </div>
     <div class="caja"> 
-        <label class = 'descripcionProducto' for="DescripcionProducto"> Descripcion del producto:</label><br><textarea class='cajaDescripcion' name= "description" placeholder= "Inserte la aqui descripcion del producto..."></textarea>
+        <label class = 'descripcionProducto' for="DescripcionProducto"> Product description:</label><br><textarea class='cajaDescripcion' name= "description"></textarea placeholder="Insert product description">
     </div>
     </select> </div>
-<div> <input class="botonEditProduct" type="submit" value="Agregar Producto"></div>
+<div> <input class="botonEditProduct" type="submit" value="Add product"></div>
 </form>
 
 <%- include('./partials/footer') %>

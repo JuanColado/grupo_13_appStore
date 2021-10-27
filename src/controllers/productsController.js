@@ -5,12 +5,17 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
 const productsController = {
-    productCart: (req, res) => res.render('productCart'), 
+    
+    productCart: (req, res) => 
+        res.render('productCart'), 
     //productDetail: (req, res) => res.render('productDetail'), 
+    
+    products: (req,res) => 
+        res.render('products', {products: products}),
+    
+    productCreate: (req,res) => 
+        res.render('productCreate'),
 
-    editProduct: (req,res) => res.render('editProduct'), 
-    products: (req,res) => res.render('products', {'products': products}),
-    productCreate: (req,res) => res.render('productCreate'),
     newProduct: (req,res) => {
         let newProduct = {
             id: products[products.length-1].id +1,
@@ -18,15 +23,35 @@ const productsController = {
             image:'default-image.png'
         };
         products.push(newProduct)
-        console.log(products)
         fs.writeFileSync(productsFilePath, JSON.stringify(products));
         res.render('products', {'products': products});
     } ,
+
     productName:(req,res) => {
         let id= req.params.id
+        let item= products.find(item => item.id == id)
+        res.render( 'productDetail', {'item': item})
+    },
 
-        let product= products.find(product => products.id == id)
-        res.render( 'productDetail', {product: product})
-    }
+    editProduct: (req,res) => {
+        let id= req.params.id;
+        let item= products.find(item => item.id == id);
+        res.render('editProduct', {'item': item})
+        },
+
+  /*   updateProduct:  (req,res) => {
+        let id= req.params.id;
+        let item= products.find(item => item.id == id);
+
+
+    }, */
+    deleteProduct:  (req,res) => {
+        let id= req.params.id;
+        let productosFinales= products.filter(productosFinales => productosFinales.id !=id);
+        fs.writeFileSync(productsFilePath, JSON.stringify(productosFinales));
+        res.redirect('/');
+        // res.render('products', {'productosFinales': productosFinales});
+    },
+
     }
     module.exports= productsController;

@@ -6,24 +6,20 @@
 <div class="producto">
 
         <div class="fotoProducto">
-          <img src="img/FIFA_22.jpeg"alt= "PS4Fifa2022">
+          <img src= <%= item.image %> alt = <%= item.name %>>
         </div>
         <div class="tituloProducto">
-            <h1 class="modelo"> FIFA </h1>
+            <h1 class="modelo"> <%= item.name %> </h1>
           </div>
       <div class="Precio">
-        <label class="precio" name="price">Precio</label> <span class="pesos">6000
+        <label class="precio" name="price">Price</label> <span class="pesos"> USD $ <%= item.price %>
         </span>
         </div>
-    <div class="Envio">Envio a todo el mundo</div>
-        <span class="stock">Stock <span class="Disponible">Disponible</span></span>
-        <div class="descripcionproducto"></div>
-        <ul><li>Plataforma: PS4</li>
-        <li>Género: Deportes</li>
-        <li>Jugadores: 1 - 22</li>
-        <li>Idioma: Español</li>
-        <li>Desarrollador: EA Sports</li></ul>
-        <label for="Cantidad">Cantidad: <select  class= "Cantidad" name="Cantidad" >
+    <div class="Envio">Worldwide available</div>
+        <div class="descripcionproducto"> Description <%= item.description %> </div>
+        <label class="category" name="category">Category:</label> <span class="category"><%= item.category %>
+</span><br>
+        <label for="Cantidad">Quantity: <select  class= "Cantidad" name="Cantidad" >
     <option value="1" selected>1</option>
     <option value="2">2</option>
     <option value="3">3</option>
@@ -37,13 +33,13 @@
     </select></label>  </div>
     <div class="BotonDetail__container">
         <div class="BotonDetail">    
-            <button type="button" class="ComprarAhora" value="Comprar ahora"><i class="fas fa-bolt"></i><a href="productCart">Comprar ahora</a></button>            
+            <button type="button" class="ComprarAhora" value="Comprar ahora"><i class="fas fa-bolt"></i><a href="productCart">Buy now</a></button>            
           </div>    
         <div class="BotonDetail">    
-            <button type="button" class="AgregarCarrito" value="Agregar al Carrito"><i class="fas fa-cart-plus"></i><a href="#">Agregar al Carrito</a></button>            
+            <button type="button" class="AgregarCarrito" value="Agregar al Carrito"><i class="fas fa-cart-plus"></i><a href="#">Add to cart </a></button>            
           </div>    
           <div class="BotonDetail">    
-           <button type="subtmit" class="VolverHome" value="VolverHome"><i class="fas fa-home"></i><a href="index">Volver al inicio</a></button>           
+           <button type="subtmit" class="VolverHome" value="VolverHome"><i class="fas fa-home"></i><a href="index">Back to home</a></button>           
           </div> </div>   
 
           
