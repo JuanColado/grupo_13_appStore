@@ -39,12 +39,26 @@ const productsController = {
         res.render('editProduct', {'item': item})
         },
 
-  /*   updateProduct:  (req,res) => {
+     updateProduct:  (req,res) => {
         let id= req.params.id;
-        let item= products.find(item => item.id == id);
+        let editProduct= products.find(item => item.id == id);
 
+        editProduct={
+            id: editProduct.id,
+            ...req.body,
+            image: editProduct.image.jpg,
+        }
+       let nuevoItem = products.map(item => {
+           if(item.id == editProduct.id) {
+               return item = {...editProduct};
+           }
+           return item
+       })
+       fs.writeFileSync(productsFilePath, JSON.stringify(products));
+        res.render('producDetail', {'item': item});
 
-    }, */
+        
+    }, 
     deleteProduct:  (req,res) => {
         let id= req.params.id;
         let productosFinales= products.filter(productosFinales => productosFinales.id !=id);
@@ -52,6 +66,8 @@ const productsController = {
         res.redirect('/');
         // res.render('products', {'productosFinales': productosFinales});
     },
+
+    
 
     }
     module.exports= productsController;
