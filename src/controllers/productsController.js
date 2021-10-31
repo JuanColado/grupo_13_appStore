@@ -21,6 +21,7 @@ const productsController = {
             id: products[products.length-1].id +1,
             ...req.body,
             image: "img/" + req.file.filename,
+            category: req.body.category
         };
         products.push(newProduct)
         fs.writeFileSync(productsFilePath, JSON.stringify(products));
@@ -46,7 +47,8 @@ const productsController = {
         editProduct={
             id: editProduct.id,
             ...req.body,
-            image: editProduct.image.jpg,
+            image: "img/" + req.file.filename,
+            category: req.body.category
         }
        let nuevoItem = products.map(item => {
            if(item.id == editProduct.id) {
@@ -54,9 +56,9 @@ const productsController = {
            }
            return item
        })
-       fs.writeFileSync(productsFilePath, JSON.stringify(products));
-        res.render('producDetail', {'item': item});
-
+       fs.writeFileSync(productsFilePath, JSON.stringify(nuevoItem, null, ' '));
+        // res.render('producDetail', {'products': products});
+        res.redirect('/');
         
     }, 
     deleteProduct:  (req,res) => {
