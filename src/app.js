@@ -12,11 +12,12 @@ app.use(express.json());
 app.use(methodOverride('_method'));
 
 app.use(express.static("../public"));
+//app.use(express.static("../public/img"));
 
 app.set("view engine", "ejs");
 app.set('views', path.join(__dirname, '/views')); 
 
-app.listen(3052,console.log("Esta corriendo en el puerto 3050"));
+app.listen(3056,console.log("Esta corriendo en el puerto 3050"));
 
 app.use("/", mainRouter);
 
