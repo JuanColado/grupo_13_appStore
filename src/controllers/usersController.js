@@ -16,31 +16,30 @@ const usersController = {
     
     register: (req,res) => 
         res.render('register'),
-
+//Crea nuevo usuario//
     newUser: (req,res) => {
         let newUser = {
             id: users[users.length-1].id +1,
             ...req.body,
-            image: "img/" + req.file.filename,
-           
+            image:req.file?req.file.filename:'img/default.png',
         };
-        users.push(newUsers)
+        users.push(newUser)
         fs.writeFileSync(usersFilePath, JSON.stringify(users));
-        res.render('users', {'users': users});
+        res.redirect('/users/profile');
     } ,
-
+//muestra perfil de un usuario//
     usersName:(req,res) => {
         let id= req.params.id
         let item= users.find(item => item.id == id)
         res.render( 'profile', {'item': item})
     },
-
+//Muestra un  usuario para editarlo//
     editUsers: (req,res) => {
         let id= req.params.id;
         let item= users.find(item => item.id == id);
         res.render('usersEdit', {'item': item})
         },
-
+//Edita un usuario//
      updateUsers:  (req,res) => {
         let id= req.params.id;
         let editUsers= users.find(item => item.id == id);
@@ -61,6 +60,7 @@ const usersController = {
         res.render('/profile', {users});
         
     }, 
+    //Elimina un usuario//
     deleteUsers:  (req,res) => {
         let id= req.params.id;
         let usersFinal= users.filter(usersFinal => usersFinal.id !=id);

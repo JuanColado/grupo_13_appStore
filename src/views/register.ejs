@@ -5,14 +5,18 @@
 <body>
     <%- include('./partials/header') %>
 
-    <form class="formulario" action="/" method="POST" enctype="multipart/form-data">
+    <form class="formulario" action="/users/register" method="POST" enctype="multipart/form-data">
         <h4>Crea una cuenta:</h4>
         <div class="caja">
-            <label for="NombreApellido"> Complete name </label><br><input type="text" name="NombreApellido"
+            <label for="NombreApellido"> First name </label><br><input type="text" name="first_name"
                 placeholder="Insert your name">
         </div>
         <div class="caja">
-            <label for="Email">Email</label><br><input type="email" name="Email" id="Email"
+            <label for="NombreApellido"> Last name </label><br><input type="text" name="last_name"
+                placeholder="Insert your name">
+        </div>
+        <div class="caja">
+            <label for="email">Email</label><br><input type="email" name="email" id="email"
                 placeholder="Insert your email">
         </div>
         <div class="caja">
@@ -24,10 +28,8 @@
                 placeholder="Repeat your password">
         </div>
         <div class="caja">
-            <label for="Telefono">Telephone </label><br><input type="tel" name="Telefono" id="Telefono"
-                placeholder="Insert your phone number">
+            <label> Profile image: </label> <input type="file" name="image" accept=".jpg, .jpeg, .png">
         </div>
-        
         <label class="tyc"><span>By logging in to your account, you agree to our <a href="#"> Terms and Conditions and
                     policy of cookies.</a></span></label>
         <div> <input class="boton" type="submit" value="Register!"></div>
