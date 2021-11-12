@@ -1,33 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
-    <%- include('./partials/head') %>
-<body>   
+<%- include('./partials/head') %>
+
+<body>
     <%- include('./partials/header') %>
 
 
-<form class="formulario" action="/products" method="POST" enctype="multipart/form-data">
-    <h4><i class="fas fa-user-plus"></i>Add product:</h4>
-<div class="caja"> 
-    <label for="NombreProducto"> Product name:</label><br><input type="text" name= "Name" placeholder= "Insert product name">
-</div>
-<div class="caja"> 
-    <label for="precio">Product price:</label><br><input type="text" name="price" id= "precio" placeholder="Insert product price">
-</div>
-<div class="caja"> <label for="category" class= "category" name="category" ></label>Product category: 
-    <br>
- <select class="StockDisponible"> <option value="Disponible" >Games</option>
-    <option value="No Disponible">Software</option>
-    </select> </div>
-<div class="caja"> 
-    <label> Product image: </label> <input type="file" name="image" accept=".jpg, .jpeg, .png">
-</div>
-<div class="caja"> <label for="Stock" class= "Stock" name="stock" ></label>Stock: 
-    <br>
- <select class="StockDisponible"> <option value="Disponible" >Available</option>
-    <option value="No Disponible">Unavailable</option>
-    </select> </div>
-    <div class="caja"> 
-        <label class = 'descripcionProducto' for="DescripcionProducto"> Product description:</label><br><textarea class='cajaDescripcion' name= "description"></textarea placeholder="Insert product description">
+    <form class="formulario" action="/products" method="POST" enctype="multipart/form-data">
+        <h4><i class="fas fa-user-plus"></i>Add product:</h4>
+        <div class="caja">
+            <label for="NombreProducto"> Product name:</label><br><input type="text" name="name"
+                placeholder="Insert product name">
+        </div>
+        <div class="caja">
+            <label for="precio">Product price:</label><br><input type="text" name="price" id="precio"
+                placeholder="Insert product price">
+        </div>
+        <div class="caja"> <label for="category" class="category" name="category"></label>Product category:
+            <br>
+            <select class="StockDisponible">
+                <option value="Disponible">Games</option>
+                <option value="No Disponible">Software</option>
+            </select> </div>
+        <div class="caja">
+            <label> Product image: </label> <input type="file" name="image" accept=".jpg, .jpeg, .png">
+        </div>
+        <div class="caja"> <label for="Stock" class="Stock" name="stock"></label>Stock:
+            <br>
+            <select class="StockDisponible">
+                <option value="Disponible">Available</option>
+                <option value="No Disponible">Unavailable</option>
+            </select> </div>
+        <div class="caja">
+            <label class='descripcionProducto' for="DescripcionProducto"> Product description:</label><br><textarea
+                class='cajaDescripcion' name="description"></textarea placeholder="Insert product description">
     </div>
     </select> </div>
 <div> <input class="botonEditProduct" type="submit" value="Add product"></div>

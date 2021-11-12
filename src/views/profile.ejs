@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es"></html>
+    <%- include('./partials/head') %>
+    <body>
+      <%- include('./partials/header') %>
+      <div class="producto">
+
+        <div class="fotoProducto">
+          <img src= <%= item.image %> alt = <%= item.first_name %>>
+        </div>
+        <div class="tituloProducto">
+            <h1 class="modelo"> <%= item.first_name %> <%= item.last_name %></h1>
+          </div>
+      <div class="Precio">
+        <label class="precio" name="email">Email</label> <span class="pesos">  <%= item.email%>
+        </span>
+        </div>
+    
+
+<div class="BotonDetail">    
+  <button type="button" class="ComprarAhora" value="Edit user"><i class="fas fa-bolt"></i><a href="/users/usersEdit">Edit User</a></button>            
+</div>      
+<div class="BotonDetail">    
+ <button type="subtmit" class="VolverHome" value="VolverHome"><i class="fas fa-home"></i><a href="index">Back to home</a></button>           
+</div> </div> 
+<%- include('./partials/footer') %>
+</body>
+</html>

@@ -1,72 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
-    <%- include('./partials/head') %>
-<body>   
+<%- include('./partials/head') %>
+
+<body>
     <%- include('./partials/header') %>
 
-<form class="formulario" action="/" method="POST">
-    <h4>Crea una cuenta:</h4>
-<div class="caja"> 
-    <label for="NombreApellido"> Complete name </label><br><input type="text" name= "NombreApellido" placeholder= "Insert your name">
-</div>
-<div class="caja"> 
-    <label for="Email">Email</label><br><input type="email" name="Email" id= "Email" placeholder="Insert your email">
-</div>
-<div class="caja"> 
-    <label for="password"> Password</label><br><input type="password" name="password" id ="pasword" placeholder="Insert your password">
-</div>
-<div class="caja"> 
-    <label for="password"> Repite your password</label> <br><input type="password" name="password" id="password" placeholder= "Repeat your password">
-</div>
-<div class="caja"> 
-    <label for="Telefono">Telephone </label><br><input type="tel" name="Telefono" id="Telefono"placeholder= "Insert your phone number">
-</div>
-<div class="caja"> 
-    <label for="Direccion"> Direction</label><br><input type="text" name="Direccion" id="Direccion" placeholder= "Insert your adress">
-</div>
-<div class="caja"> 
-    <label for="Piso">Floor </label><br><input type="text" name="Piso" id="Piso"placeholder= "Insert your floor">
-</div>
-<div class="caja"> 
-    <label for="CP"> Zip code</label><br><input type="text" name="CP" id="CP"placeholder= "Insert your zip code">
-</div>
-<div class="caja"> 
-    <label for="Localidad"> City</label><br><input type="text" name="Localidad" id="Localidad" placeholder= "Insert your city"> 
-</div>
-<label for="country"> Country</label><br><input type="text" name="Country" id="Localidad" placeholder= "Insert your country"> 
-</div>
-<!-- <div class="caja"> 
-    <label for="Provincia">State </label> <br>
-    <select  class= "Provincia" name="Provincia" placeholder="Select your state">
-    <option value="Buenos Aires">Buenos Aires</option>
-    <option value="Ciudad Autónoma de Buenos Aires">Ciudad Autónoma de Buenos Aires</option>
-    <option value="Catamarca">Catamarca</option>
-    <option value="Chaco">Chaco</option>
-    <option value="Chubut">Chubut</option>
-    <option value="Cordoba">Cordoba</option>
-    <option value="Corrientes">Corrientes</option>
-    <option value="Entre Rios">Entre Rios</option>
-    <option value="Formosa">Formosa</option>
-    <option value="Jujuy">Jujuy</option>
-    <option value="La Pampa">La Pampa</option>
-    <option value="La Rioja">La Rioja</option>
-    <option value="Mendoza">Mendoza</option>
-    <option value="Misiones">Misiones</option>
-    <option value="Neuquen">Neuquen</option>
-    <option value="Rio Negro">Rio Negro</option>
-    <option value="Salta">Salta</option>
-    <option value="San Juan">San Juan</option>
-    <option value="San Luis">San Luis</option>
-    <option value="Santa Cruz">Santa Cruz</option>
-    <option value="Santa Fe">Santa Fe</option>
-    <option value="Santiago del Estero">Santiago del Estero</option>
-    <option value="Tierra del Fuego">Tierra del Fuego</option>
-    <option value="Tucuman">Tucuman</option>
-    </select> </div> -->
-    <label class="tyc"><span>By logging in to your account, you agree to our <a href="#"> Terms and Conditions and policy of cookies.</a></span></label>
-<div> <input class="boton" type="submit" value="Register!"></div>
-<div class="tenesCuenta"> <a href="Login"> ¿Already a user?</a></div>
-</form>
-<%- include('./partials/footer') %>
+    <form class="formulario" action="/users/register" method="POST" enctype="multipart/form-data">
+        <h4>Crea una cuenta:</h4>
+        <div class="caja">
+            <label for="NombreApellido"> First name </label><br><input type="text" name="first_name"
+                placeholder="Insert your name">
+        </div>
+        <div class="caja">
+            <label for="NombreApellido"> Last name </label><br><input type="text" name="last_name"
+                placeholder="Insert your name">
+        </div>
+        <div class="caja">
+            <label for="email">Email</label><br><input type="email" name="email" id="email"
+                placeholder="Insert your email">
+        </div>
+        <div class="caja">
+            <label for="password"> Password</label><br><input type="password" name="password" id="pasword"
+                placeholder="Insert your password">
+        </div>
+        <div class="caja">
+            <label for="password"> Repite your password</label> <br><input type="password" name="password" id="password"
+                placeholder="Repeat your password">
+        </div>
+        <div class="caja">
+            <label> Profile image: </label> <input type="file" name="image" accept=".jpg, .jpeg, .png">
+        </div>
+        <label class="tyc"><span>By logging in to your account, you agree to our <a href="#"> Terms and Conditions and
+                    policy of cookies.</a></span></label>
+        <div> <input class="boton" type="submit" value="Register!"></div>
+        <div class="tenesCuenta"> <a href="Login"> ¿Already a user?</a></div>
+    </form>
+    <%- include('./partials/footer') %>
 </body>
+
 </html>

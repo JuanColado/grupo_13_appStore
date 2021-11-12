@@ -20,7 +20,7 @@ const productsController = {
         let newProduct = {
             id: products[products.length-1].id +1,
             ...req.body,
-            image: "img/" + req.file.filename,
+            image:req.file?req.file.filename:'img/default.png',
             category: req.body.category
         };
         products.push(newProduct)
