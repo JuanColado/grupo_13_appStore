@@ -9,28 +9,36 @@
         <h4>Crea una cuenta:</h4>
         <div class="caja">
             <label for="NombreApellido"> First Name </label><br><input type="text" name="first_name"
-                placeholder="Insert your name">
+                placeholder="Insert your name" value="<%= locals.old && old.first_name %>"> 
+                <% if (locals.errors && errors.first_name) { %>
+                    <p class="feedback"><%= errors.first_name.msg %></p>
+                <% } %>
         </div>
         <div class="caja">
             <label for="NombreApellido"> Last Name </label><br><input type="text" name="last_name"
-                placeholder="Insert your name">
+                placeholder="Insert your name" value="<%= locals.old && old.last_name %>">
+                <% if (locals.errors && errors.last_name) { %>
+                    <p class="feedback"><%= errors.last_name.msg %></p>
+                <% } %>
         </div>
 
         <div class="caja">
             <label for="Email">Email</label><br><input type="email" name="email" id="Email"
-                placeholder="Insert your email">
+                placeholder="Insert your email" value="<%= locals.old && old.email %>">
+                <% if (locals.errors && errors.email) { %>
+                    <p class="feedback"><%= errors.email.msg %></p>
+                <% } %>
         </div>
         <div class="caja">
             <label for="password"> Password</label><br><input type="password" name="password" id="pasword"
-                placeholder="Insert your password">
+                placeholder="Insert your password" value="<%= locals.old && old.password %>">
+                <% if (locals.errors && errors.password) { %>
+                    <p class="feedback"><%= errors.password.msg %></p>
+                <% } %>
         </div>
+        
         <div class="caja">
-            <label for="password"> Repite your password</label> <br><input type="password" name="password" id="password"
-                placeholder="Repeat your password">
-        </div>
-
-        <div class="caja">
-            <label> Product image: </label> <input type="file" name="image" accept=".jpg, .jpeg, .png">
+            <label> Profile image: </label> <input type="file" name="image" accept=".jpg, .jpeg, .png">
         </div>
 
         <label class="tyc"><span>By logging in to your account, you agree to our <a href="#"> Terms and Conditions and
