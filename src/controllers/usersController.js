@@ -2,6 +2,9 @@ const path = require('path');
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const fs = require("fs");
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+const bcrypt = require('bcryptjs')
+
+const salt = bcrypt.genSaltSync(10);
 
 
 const usersController = {
@@ -20,8 +23,9 @@ const usersController = {
     newUser: (req,res) => {
         let newUser = {
             id: users[users.length-1].id +1,
-            ...req.body,
-            image:req.file?req.file.filename:'img/default.png',
+            ...req.body, 
+            image:req.file?req.file.filename:'img/default.png', 
+            password: bcrypt.hashSync(req.body.password, 10),
         };
         users.push(newUser)
         fs.writeFileSync(usersFilePath, JSON.stringify(users));
