@@ -1,31 +1,35 @@
 <!DOCTYPE html>
-<html lang="es"></html>
-    <%- include('./partials/head') %>
-    <body>
-      <%- include('./partials/header') %>
-      <main>
-        <div class="titulo">
-            <h1>All users </h1>
+<html lang="es">
+
+</html>
+<%- include('./partials/head') %>
+
+<body>
+  <%- include('./partials/header') %>
+  <main>
+    <div class="titulo">
+      <h1>All users </h1>
+    </div>
+
+    <% for(let i = 0; i < users.length; i++){ %>
+    <li>
+      <div class="card col-11 position-relative">
+        <img class="card-img-top" src=<%= users[i].image%> alt=<%=users[i].first_name%>>
+        <div class="card-body position-absolute titulo-juegos d-flex align-content-center">
+          <h4 class="card-title flex-grow-1"><%=users[i].first_name%></h4>
+          <h4 class="card-title flex-grow-1"><%=users[i].last_name%></h4>
+          <h4 class="card-title flex-grow-1"><%=users[i].email%></h4>
+          <h4 class="card-title flex-grow-1"><%=users[i].image%></h4>
+
+          <a href="/users/users/<%= users[i].id %>" class="stretched-link"></a>
         </div>
-
-<% for(let i = 0; i < users.length; i++){ %>
-<li>
-<div class="card col-11 position-relative">
-  <img class="card-img-top" src=<%= users[i].image%> alt=<%=users[i].first_name%>>
-  <div class="card-body position-absolute titulo-juegos d-flex align-content-center">
-    <h4 class="card-title flex-grow-1"><%=users[i].first_name%></h4>
-    <h4 class="card-title flex-grow-1"><%=users[i].last_name%></h4>
-    <p class="card-text">
-      <%= users[i].price %>
-    </p>
-    <a href="/users/users/<%= users[i].id %>" class="stretched-link"></a>
-  </div>
-</div>
-</li>
-<% } %>
-</main>
+      </div>
+    </li>
+    <% } %>
+  </main>
 
 
-<%- include('./partials/footer') %>
+  <%- include('./partials/footer') %>
 </body>
+
 </html>

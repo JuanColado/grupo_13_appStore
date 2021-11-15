@@ -19,4 +19,10 @@
     "image": "NBA2K_22.jpeg",
     "category": "Games",
     "price": 90
-} ]
+}, {
+    "id": 6,
+    "name": "FIFA 22",
+    "price": "50",
+    "description": "",
+    "image": "1636400697297.jpg"
+}]

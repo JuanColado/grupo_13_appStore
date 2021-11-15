@@ -24,7 +24,7 @@ const usersController = {
             image: "img/" + req.file.filename,
            
         };
-        users.push(newUsers)
+        users.push(newUser)
         fs.writeFileSync(usersFilePath, JSON.stringify(users));
         res.render('users', {'users': users});
     } ,
