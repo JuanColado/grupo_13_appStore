@@ -18,6 +18,7 @@ const upload = multer({ storage: multerDiskStorage});
 const usersController = require ("../controllers/usersController");
 
 router.get('/login', usersController.login);
+router.post('/login', validaciones, usersController.processLogin)
 router.get('/register', usersController.register);
 //Muestra un usuario//
 router.get('/profile', usersController.usersProfile);

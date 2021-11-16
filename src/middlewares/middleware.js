@@ -4,20 +4,20 @@ const {check} = require('express-validator');
 const middlewares=[
 check ('first_name')
 .notEmpty()
-.withMessage('Debes completar este campo con tu nombre.'),
+.withMessage('This field must contains your first name'),
 
 check ('last_name')
 .notEmpty()
-.withMessage('Debes completar este campo con tu apellido.'),
+.withMessage('This field must contains your last name'),
 
 check ('email')
-.notEmpty().withMessage('Debes completar este campo con un E-mail valido.')
+.notEmpty().withMessage('This field must contains a valid email')
 .isEmail()
 ,
 
 check ('password')
-.notEmpty().withMessage('Este campo no puede estar vacio')
-.isLength({min : 10, max: 100}).withMessage('Debes completar este campo con una contraseña de minimo 10 carateres.'),
+.notEmpty().withMessage("This field can't be blank")
+.isLength({min : 10, max: 100}).withMessage('The password must contains at least 10 caracters.'),
 
 
 
