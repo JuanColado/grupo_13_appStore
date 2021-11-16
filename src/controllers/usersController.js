@@ -11,22 +11,23 @@ const usersController = {
   login: (req, res) => res.render("login"),
   processLogin: function (req, res) {
     let errors = validationResult(req);
-    if (errors.isEmpty()) {
+    if (errors.isEmpty()) { 
       for (let i= 0; i < users.length; i++){
-      if( users[i].email == req.body.email){
-        if (bcrypt.compareSync(req.body.password, users[i].password)){
-            let userLogeado = users[i];
-            break;
+      if( req.body.email == users[i].email && bcrypt.compareSync(req.body.password, users[i].password)){
+         let userLogeado = users[i];
+        
         }
       }
-    } if (userLogeado == undefined){
-        return res.render('login', {errors: [{msg: 'Email or password invalid'}]})
+     if (userLogeado == undefined){
+        return res.render('login', {errors: [{msg: 'Email or password invalid'}]});
     }
     req.session.userLogueado = userLogeado;
-    res.redirect("/users/profile");
-    } else {
+    res.redirect("/users/profile")
+    }
+    else {
       return res.render("login", { errors: errors.mapped(), old: req.body });
     }
+  
   },
   usersProfile: (req, res) => res.render("profile"),
   //usersDetail: (req, res) => res.render('usersDetail'),
