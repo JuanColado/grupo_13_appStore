@@ -57,14 +57,7 @@ const usersController = {
       res.render("register", { errors: errors.mapped(), old: req.body });
     }
   },
-  //muestra perfil de un usuario//
-  usersName: (req, res) => {
-    let id = req.params.id;
-    let item = users.find((item) => item.id == id);
-    res.render("profile", {
-      item: item,
-    });
-  },
+ 
   //Muestra un  usuario para editarlo//
   editUsers: (req, res) => {
     let id = req.params.id;

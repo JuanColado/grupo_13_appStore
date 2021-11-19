@@ -12,13 +12,14 @@ const multerDiskStorage = multer.diskStorage({
         callback(null, folder);
     },
     filename: (req,file,callback) => {
-        let imageName = Date.now() + path.extname(file.originalname);
+        let imageName =  Date.now() + path.extname(file.originalname);
         callback(null, imageName);
     }
 })
 const upload = multer({ storage: multerDiskStorage});
 const usersController = require ("../controllers/usersController");
 
+//Formulario y boton de login//
 router.get('/login', authMiddleware, usersController.login);
 router.post('/login', validaciones, usersController.processLogin)
 
@@ -28,12 +29,9 @@ router.get('/profile/', guestMiddleware, usersController.usersProfile);
 //Muestra lista usuarios//
 router.get('/', usersController.users);
 
-//Formulario de registro nuevo usuario//
+//Formulario y boton de registro nuevo usuario//
 router.get('/register', authMiddleware, usersController.register);
 router.post('/profile',upload.single('image'), validaciones, usersController.newUser);
-
-//muestra perfil de un usuario//
-router.get('/profile/:id', usersController.usersName);
 
 //Muestra un  usuario para editarlo//
 router.get('/usersEdit', usersController.editUsers);
