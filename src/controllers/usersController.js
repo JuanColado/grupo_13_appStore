@@ -4,32 +4,34 @@ const fs = require("fs");
 const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 const bcrypt = require("bcryptjs");
 const { validationResult } = require("express-validator");
-
+const User = require('../model/User.js')
 const salt = bcrypt.genSaltSync(10);
 
 const usersController = {
   login: (req, res) => res.render("login"),
+
   processLogin: function (req, res) {
-    let errors = validationResult(req);
-    if (errors.isEmpty()) { 
-      for (let i= 0; i < users.length; i++){
-      if( req.body.email == users[i].email && bcrypt.compareSync(req.body.password, users[i].password)){
-         let userLogeado = users[i];
-        
-        }
+    let userToLogin = User.findByField('email', req.body.email);
+    if(userToLogin){
+      let passwordOk = bcrypt.compareSync(req.body.password, userToLogin.password);
+      if(passwordOk){
+        delete userToLogin.password
+        req.session.userLogueado = userToLogin;
+        return res.redirect('profile')
       }
-     if (userLogeado == undefined){
-        return res.render('login', {errors: [{msg: 'Email or password invalid'}]});
+      return res.render('login',{
+        errors: {
+          email: {
+            msg: 'Las credenciales son invalidas'
+          }
+        }
+      });
     }
-    req.session.userLogueado = userLogeado;
-    res.redirect("/users/profile")
-    }
-    else {
-      return res.render("login", { errors: errors.mapped(), old: req.body });
-    }
-  
   },
-  usersProfile: (req, res) => res.render("profile"),
+  usersProfile: (req, res) => {
+    res.render("profile",
+    {user: req.session.userLogueado}
+)},
   //usersDetail: (req, res) => res.render('usersDetail'),
 
   users: (req, res) =>

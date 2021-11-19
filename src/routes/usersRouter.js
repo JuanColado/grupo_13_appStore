@@ -3,6 +3,8 @@ const router = express.Router();
 const path = require('path');
 const {check} = require('express-validator');
 const validaciones = require ('../middlewares/middleware');
+const guestMiddleware = require('../middlewares/guestMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
 const multer = require('multer');
 const multerDiskStorage = multer.diskStorage({
     destination: (req,file,callback) => {
@@ -17,17 +19,17 @@ const multerDiskStorage = multer.diskStorage({
 const upload = multer({ storage: multerDiskStorage});
 const usersController = require ("../controllers/usersController");
 
-router.get('/login', usersController.login);
+router.get('/login', authMiddleware, usersController.login);
 router.post('/login', validaciones, usersController.processLogin)
-router.get('/register', usersController.register);
+
 //Muestra un usuario//
-router.get('/profile', usersController.usersProfile);
+router.get('/profile/', guestMiddleware, usersController.usersProfile);
 
 //Muestra lista usuarios//
 router.get('/', usersController.users);
 
 //Formulario de registro nuevo usuario//
-router.get('/register', usersController.register);
+router.get('/register', authMiddleware, usersController.register);
 router.post('/profile',upload.single('image'), validaciones, usersController.newUser);
 
 //muestra perfil de un usuario//
