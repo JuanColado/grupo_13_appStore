@@ -26,9 +26,6 @@ router.post('/login', validaciones, usersController.processLogin)
 //Muestra un usuario//
 router.get('/profile/', guestMiddleware, usersController.usersProfile);
 
-//Muestra lista usuarios//
-router.get('/', usersController.users);
-
 //Formulario y boton de registro nuevo usuario//
 router.get('/register', authMiddleware, usersController.register);
 router.post('/profile',upload.single('image'), validaciones, usersController.newUser);
@@ -42,5 +39,6 @@ router.put('/:id/edit', upload.single('image'), usersController.updateUsers);
 //Elimina un usuario//
 router.delete('/:id', usersController.deleteUsers);
 
-
+ //Para salir de la sesion
+ router.get ('/logout', usersController.logOut);
 module.exports = router;

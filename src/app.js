@@ -5,14 +5,17 @@ const methodOverride = require('method-override');
 const mainRouter =  require ('../src/routes/mainRouter');
 const usersRouter =  require ('../src/routes/usersRouter');
 const productsRouter =  require ('../src/routes/productsRouter');
-const session = require('express-session')
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
+const userLogueado = require('../src/middlewares/userLoggedMiddleware');
 
 app.use(express.urlencoded({extended: false}));
 app.use(session({resave: false ,secret: "AppStore!!", saveUninitialized: false}))
 app.use(express.json());
 app.use(methodOverride('_method'));
-
+app.use(cookieParser());
 app.use(express.static("../public"));
+app.use(userLogueado);
 //app.use(express.static("../public/img"));
 
 app.set("view engine", "ejs");

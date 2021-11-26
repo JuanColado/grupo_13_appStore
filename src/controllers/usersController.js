@@ -17,6 +17,9 @@ const usersController = {
       if(passwordOk){
         delete userToLogin.password
         req.session.userLogueado = userToLogin;
+        if(req.body.rememberme  =! undefined){
+          res.cookie('rememberme', req.body.email, {maxAge:600000});
+        }
         return res.redirect('profile')
       }
       return res.render('login',{
@@ -33,11 +36,11 @@ const usersController = {
     {user: req.session.userLogueado}
 )},
   //usersDetail: (req, res) => res.render('usersDetail'),
-
+/* 
   users: (req, res) =>
     res.render("usersList", {
       users: users,
-    }),
+    }), */
 
   register: (req, res) => res.render("register"),
   //Crea nuevo usuario//
@@ -97,6 +100,11 @@ const usersController = {
     fs.writeFileSync(usersFilePath, JSON.stringify(usersFinal));
     res.redirect("/");
     // res.render('users', {'usersFinales': productosFinales}); */
+  },
+  //para cuando cierra sesion
+  logOut: (req,res)=>{
+    req.session.destroy();
+    return res.redirect('/');
   },
 };
 module.exports = usersController;
