@@ -21,7 +21,7 @@ app.use(userLogueado);
 app.set("view engine", "ejs");
 app.set('views', path.join(__dirname, '/views')); 
 
-app.listen(3053,console.log("Esta corriendo en el puerto 3050"));
+app.listen(3053,console.log("Esta corriendo en el puerto 3053"));
 
 app.use("/", mainRouter);
 
