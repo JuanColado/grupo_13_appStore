@@ -6,19 +6,25 @@
 <div class="producto">
 
         <div class="fotoProducto">
-          <img src= img/<%= products.product_image %> alt = <%= products.product_name %>>
+          <img src= img/<%= Product.product_image %> alt = <%= Product.product_name %>>
         </div>
         <div class="tituloProducto">
-            <h1 class="modelo"> <%= products.product_name %> </h1>
+            <h1 class="modelo"> <%= Product.product_name %> </h1>
           </div>
       <div class="Precio">
-        <label class="precio" name="price">Price</label> <span class="pesos"> USD $ <%= products.product_price %>
+        <label class="precio" name="price">Price</label> <span class="pesos"> USD $ <%= Product.product_price %>
         </span>
         </div>
     <div class="Envio">Worldwide available</div>
-        <div class="descripcionproducto"> Description <%= products.product_description %> </div>
-        <label class="category" name="category">Category:</label> <span class="category"> <%= products.product_category %>
-</span><br>
+        <div class="descripcionproducto"> Description <%= Product.product_description %> </div>
+        <label for="product_category">Category: </label>
+      
+        <span class="product_category" id="" required>
+            <% allProduct_category.forEach(product_category => { %>
+   <% if (Product.product_category == product_category.id) { %><%= product_category.category_name %><% }; %>
+            <% }); %> <br>
+            </span>
+                
         <label for="Cantidad">Quantity: <select  class= "Cantidad" name="Cantidad" >
     <option value="1" selected>1</option>
     <option value="2">2</option>

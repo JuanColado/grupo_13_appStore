@@ -16,6 +16,14 @@
             <label for="precio">Product price:</label><br><input type="text" name="price" id="precio"
                 placeholder="Insert product price">
         </div>
+        <label for="product_category">Category </label>
+            <p>
+                <select name="product_category" id="" required>
+                    <option value="" disabled selected>- select category - </option>
+                    <% allProduct_category.forEach(genre => { %>
+                    <option value="<%= product_category.id %>"><%= product_category.category_name %></option>
+                    <% }); %>
+                </select>
         <div class="caja"> <label for="category" class="category" name="category"></label>Product category:
             <br>
             <select class="StockDisponible">

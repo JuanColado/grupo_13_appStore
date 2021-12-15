@@ -12,13 +12,39 @@ const productsController = {
     //productDetail: (req, res) => res.render('productDetail'), 
     
     products: (req,res) => {
-            db.products.findAll()  
+            db.Product.findAll()  
     .then(function(products){
         res.render("products", {products: products})})},
       //  res.render('products', {products: products}),
     
-    productCreate: (req,res) => 
-        res.render('productCreate'),
+    productCreate: function(req,res){
+        let promProduct_category = db.Product_category.findAll();
+
+        Promise
+        .all([promProduct_category])
+        .then(([allProduct_category]) => {
+            return res.render('productCreate', {allProduct_category})})
+        .catch(error => res.send(error))
+    } ,
+        
+
+        // create: function (req,res) {
+        //     Movies
+        //     .create(
+        //         {
+        //             title: req.body.title,
+        //             rating: req.body.rating,
+        //             awards: req.body.awards,
+        //             release_date: req.body.release_date,
+        //             length: req.body.length,
+        //             genre_id: req.body.genre_id
+        //         }
+        //     )
+        //     .then(()=> {
+        //         return res.redirect('/movies')})            
+        //     .catch(error => res.send(error))
+        // },
+
 
     newProduct: (req,res) => {
         let newProduct = {
@@ -33,11 +59,20 @@ const productsController = {
     } ,
 
     productName:(req,res) => {
-        db.Product.findByPk(req.params.id) 
+        let productId = req.params.id;
+        let promProduct = db.Product.findByPk(productId,{include: ['product_categories']});
+        let promProduct_category = db.Product_category.findAll();
+        Promise
+        .all([promProduct, promProduct_category])
+        .then(([Product, allProduct_category]) => {
+            return res.render('productDetail', {Product,allProduct_category})})
+        .catch(error => res.send(error))
+
+        // db.Product.findByPk(req.params.id) 
         
-        .then(function(products){
-        res.render( 'productDetail', {'products': products})
-        })
+        // .then(function(products){
+        // res.render( 'productDetail', {'products': products})
+        // })
         
     },
 
