@@ -1,7 +1,8 @@
 const path = require('path');
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const fs = require("fs");
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+//const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const db = require("../../database/models")
 
 
 const productsController = {
@@ -10,8 +11,11 @@ const productsController = {
         res.render('productCart'), 
     //productDetail: (req, res) => res.render('productDetail'), 
     
-    products: (req,res) => 
-        res.render('products', {products: products}),
+    products: (req,res) => {
+            db.products.findAll()  
+    .then(function(products){
+        res.render("products", {products: products})})},
+      //  res.render('products', {products: products}),
     
     productCreate: (req,res) => 
         res.render('productCreate'),
@@ -29,9 +33,12 @@ const productsController = {
     } ,
 
     productName:(req,res) => {
-        let id= req.params.id
-        let item= products.find(item => item.id == id)
-        res.render( 'productDetail', {'item': item})
+        db.Product.findByPk(req.params.id) 
+        
+        .then(function(products){
+        res.render( 'productDetail', {'products': products})
+        })
+        
     },
 
     editProduct: (req,res) => {

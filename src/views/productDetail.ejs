@@ -6,18 +6,18 @@
 <div class="producto">
 
         <div class="fotoProducto">
-          <img src= <%= item.image %> alt = <%= item.name %>>
+          <img src= img/<%= products.product_image %> alt = <%= products.product_name %>>
         </div>
         <div class="tituloProducto">
-            <h1 class="modelo"> <%= item.name %> </h1>
+            <h1 class="modelo"> <%= products.product_name %> </h1>
           </div>
       <div class="Precio">
-        <label class="precio" name="price">Price</label> <span class="pesos"> USD $ <%= item.price %>
+        <label class="precio" name="price">Price</label> <span class="pesos"> USD $ <%= products.product_price %>
         </span>
         </div>
     <div class="Envio">Worldwide available</div>
-        <div class="descripcionproducto"> Description <%= item.description %> </div>
-        <label class="category" name="category">Category:</label> <span class="category"> <%= item.category %>
+        <div class="descripcionproducto"> Description <%= products.product_description %> </div>
+        <label class="category" name="category">Category:</label> <span class="category"> <%= products.product_category %>
 </span><br>
         <label for="Cantidad">Quantity: <select  class= "Cantidad" name="Cantidad" >
     <option value="1" selected>1</option>
