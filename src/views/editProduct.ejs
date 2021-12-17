@@ -6,20 +6,20 @@
     <%- include('./partials/header') %>
 
 
-    <form action="/products/<%= item.id %>/edit?_method=PUT" method="POST" enctype="multipart/form-data">
+    <form action="/products/<%= Product.id %>/edit?_method=PUT" method="POST" enctype="multipart/form-data">
         <h4><i class="far fa-edit"></i>Edit product:
             </br>
-            <%= item.name %></h4>
+            <%= Product.name %></h4>
         <div class="caja">
-            <label for="NombreProducto"> Product name: </label><br><input type="text" name="name"
-                placeholder="<%= item.name %>">
+            <label for="NombreProducto"> Product name: </label><br><input type="text" name="product_name"
+                value="<%= Product.product_name %>">
         </div>
         <div class="caja">
-            <label for="precio">Product price:</label><br><input type="text" name="price" id="price"
-                placeholder="USD $ <%= item.price%>">
+            <label for="precio">Product price:</label><br><input type="text" name="product_price" id="price"
+                value=" <%= Product.product_price%>">
         </div>
         <div class="caja">
-            <label> Product image: </label> <input type="file" name="image" accept=".jpg, .jpeg, .png">
+            <label> Product image: </label> <input type="file" name="product_image" accept=".jpg, .jpeg, .png">>
         </div>
         <div class="caja"> <label for="Stock" class="Stock" name="Stock"></label>Stock:
             <br>
@@ -29,22 +29,24 @@
             </select></label> </div>
         <div class="caja">
             <label for="DescripcionProducto"> Product description:</label><br><textarea class='cajaDescripcion'
-                name="description" placeholder="<%= item.description%>"></textarea>
+                name="description" > <%= Product.product_description %> </textarea>
         </div>
-        <div class="caja"> <label for="category" class="category" name="category" id="category">Category:
-            <br>
-            <select class="StockDisponible">
-                <option value="Games" selected>Games</option>
-                <option value="Software">Software</option>
-            </select></label> </div>
-        
+        <label for="product_category">Category: </label>
+      
+                <select name="product_category" class="StockDisponible" id="" required>
+                    <% allProduct_category.forEach(product_category => { %>
+                    <option value="<%= product_category.id %>" <% if (Product.product_category == product_category.id) { %><%= 'selected' %><% }; %>><%= product_category.category_name %></option>
+                    <% }); %>
+                </select>
+
+
         </select> </div>
 
         <div>
             <input class="botonEditProduct" type="submit" value="Edit product"></div>
     </form>
 
-    <form action="/products/<%= item.id %>?_method=DELETE" method="POST">
+    <form action="/products/<%= Product.id %>?_method=DELETE" method="POST">
         <div>
             <input class="botonEditProduct" type="submit" value="Delete product"></div>
     </form>

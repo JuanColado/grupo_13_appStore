@@ -23,13 +23,13 @@ router.get('/productCart', productsController.productCart);
 router.get('/', productsController.products);
 
 router.get('/productCreate', productsController.productCreate);
-router.post('/',upload.single('image'), productsController.newProduct);
+router.post('/',upload.single('product_image'), productsController.newProduct);
 
 router.get('/productDetail/:id', productsController.productName);
 
 router.get('/:id/edit', productsController.editProduct);
 
-router.put('/:id/edit', upload.single('image'), productsController.updateProduct);
+router.put('/:id/edit', upload.single('product_image'), productsController.updateProduct);
 router.delete('/:id', productsController.deleteProduct);
 
 

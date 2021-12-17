@@ -9,29 +9,26 @@
     <form class="formulario" action="/products" method="POST" enctype="multipart/form-data">
         <h4><i class="fas fa-user-plus"></i>Add product:</h4>
         <div class="caja">
-            <label for="NombreProducto"> Product name:</label><br><input type="text" name="name"
+            <label for="NombreProducto"> Product name:</label><br><input type="text" name="product_name"
                 placeholder="Insert product name">
         </div>
         <div class="caja">
-            <label for="precio">Product price:</label><br><input type="text" name="price" id="precio"
+            <label for="precio">Product price:</label><br><input type="text" name="product_price" id="precio"
                 placeholder="Insert product price">
         </div>
-        <label for="product_category">Category </label>
+        <div class="caja">  <label for="product_category" class="category" name="product_category">Category: </label>
             <p>
-                <select name="product_category" id="" required>
+                <select name="product_category" id="" class="StockDisponible" required>
                     <option value="" disabled selected>- select category - </option>
-                    <% allProduct_category.forEach(genre => { %>
+                    <% allProduct_category.forEach(product_category => { %>
                     <option value="<%= product_category.id %>"><%= product_category.category_name %></option>
                     <% }); %>
                 </select>
-        <div class="caja"> <label for="category" class="category" name="category"></label>Product category:
+      
             <br>
-            <select class="StockDisponible">
-                <option value="Disponible">Games</option>
-                <option value="No Disponible">Software</option>
-            </select> </div>
+            
         <div class="caja">
-            <label> Product image: </label> <input type="file" name="image" accept=".jpg, .jpeg, .png">
+            <label> Product image: </label> <input type="file" name="product_image" accept=".jpg, .jpeg, .png">
         </div>
         <div class="caja"> <label for="Stock" class="Stock" name="stock"></label>Stock:
             <br>
@@ -41,7 +38,7 @@
             </select> </div>
         <div class="caja">
             <label class='descripcionProducto' for="DescripcionProducto"> Product description:</label><br><textarea
-                class='cajaDescripcion' name="description"></textarea placeholder="Insert product description">
+                class='cajaDescripcion' name="product_description"></textarea placeholder="Insert product description">
     </div>
     </select> </div>
 <div> <input class="botonEditProduct" type="submit" value="Add product"></div>
