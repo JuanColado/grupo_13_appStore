@@ -34,10 +34,11 @@ router.post('/profile',upload.single('image'), validaciones, usersController.new
 router.get('/usersEdit', usersController.editUsers);
 
 //Edita un usuario//
-router.put('/:id/edit', upload.single('image'), usersController.updateUsers);
+router.put('/:id/usersEdit', upload.single('image'), usersController.updateUsers);
 
 //Elimina un usuario//
-router.delete('/:id', usersController.deleteUsers);
+router.get('/deleteusers', usersController.usersDelete);
+router.delete('/:id/deleteusers', usersController.deleteUsers);
 
  //Para salir de la sesion
  router.get ('/logout', usersController.logOut);

@@ -33,3 +33,18 @@ Retro Quinto Sprint:
 3. Continuar haciendo: reuniones asi de seguido. Trabajar en equipo.
 4. Hacer menos: No irse por las ramas con temas que no tenganque ver con el sprint.
 5. Dejar de hacer: Tardamos en la entrega, verdaderamente se nos complico el momento de juntarnos a poder terminarlo, a mejorar para el proximo.
+
+Retro Sexto Sprint:
+
+1. Comenzar a hacer: organizarnos bien con los tiempos y cumplir con las reuniones.
+2. Hacer más: reuniones grupales para avanzar con los sprint.
+3. Continuar haciendo: Trabajar en equipo.
+4. Hacer menos: Postergar reuniones.
+5. Dejar de hacer: Este sprint tuvimos una demora considerable en la entrega. Debemos concentrarnos para entregar en fecha.
+
+Retro Septimo Sprint:
+1. Comenzar a hacer: dividir del trabajo al inicio del sprint.
+2. Hacer más: llevar las reuniones de forma enfocada y activa en las tareas a realizar.
+3. Continuar haciendo: trabajar enfocados
+4. Hacer menos: reuniones con mucho tiempo de diferencia.
+5. Dejar de hacer: tomarse mucho tiempo para empezar el sprint.
