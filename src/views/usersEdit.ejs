@@ -15,13 +15,13 @@
             %>">
         </div>
         <div class="caja">
-            <label for="ApellidoUsuario"> Last name: </label><br><input type="text" name="last_name" value="<%= User.last_name
+            <label for="ApellidoUsuario"> Last name: </label><br><input type="text" class = "last_name_val" name="last_name" value="<%= User.last_name
              %>"  >
         </div>
         <div class="caja">
-            <label for="EmailUsuario"> E-mail: </label><br><input type="email" name="email" value="<%= User.email %>" >
+            <label for="EmailUsuario"> E-mail: </label><br><input type="email" class ="email_val" name="email" value="<%= User.email %>" >
             <div class="caja">
-                <label> Profile image: </label> <input type="file" name="image" accept=".jpg, .jpeg, .png" value="<%= User.image
+                <label> Profile image: </label> <input type="file" class = "image_val" name="image" accept=".jpg, .jpeg, .png" value="<%= User.image
                 %>"> 
             </div>
         </div>

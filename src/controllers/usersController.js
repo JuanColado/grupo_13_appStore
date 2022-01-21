@@ -92,7 +92,7 @@ register: (req, res) => res.render("register"),
     const resultValidation = validationResult(req);
 
     if (resultValidation.errors.length > 0) {
-      return res.render("/users/register", {
+      return res.render("register", {
         errors: resultValidation.mapped(),
         oldData: req.body,
       });
@@ -105,7 +105,7 @@ register: (req, res) => res.render("register"),
       })
       .then((user) => {
         if (user) {
-          res.render("/users/register", {
+          res.render("register", {
             errors: {
               email: {
                 msg: "Este Email ya se encuentra registrado",
