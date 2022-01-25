@@ -12,6 +12,16 @@ const usersController = {
   login: (req, res) => res.render("login"),
 
   processLogin: function (req, res) {
+    const validation = validationResult(req);
+    if (validation.errors.length > 0) {
+      res.render("login", {
+        errors: validation.mapped(),
+        oldData: req.body,
+        users: {
+          id: req.params.id,
+        },
+      });
+    }
     let promUser = db.User.findAll({
       where: {email: req.body.email}})
       .then(result=>{
