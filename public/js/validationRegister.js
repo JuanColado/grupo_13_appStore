@@ -12,12 +12,16 @@ window.addEventListener("load", function () {
 
     if (campoNombre.value == "") {
       errors.push("First name field cannot be empty");
-    }
+    }else if(campoNombre.value.length < 2){
+      errors.push('First name field smust contain at least 2 characters.');
+    };
 
     if (campoApellido.value == "") {
       errors.push("Last name field cannot be empty");
     }
-
+    else if(campoApellido.value.length < 2){
+      errors.push('Last name field must contain at least 2 characters.');
+    };
     /* if(campoMail.value = document.getElementById("campo").value;
     if( !(/\w+([-+.']\w+)@\w+([-.]\w+).\w+([-.]\w+)/.test(valor)) ) {
         errors.push("This field must be an email");
@@ -34,9 +38,11 @@ window.addEventListener("load", function () {
         }
       }
     }
-    if (campoPassword.vale == "") {
-      errors.push("Passowrd field connot be empty");
-    }
+    if (campoPassword.value == "") {
+      errors.push("Passowrd field cannot be empty");
+    }else if(campoPassword.value.length < 10){
+      errors.push('Password field must contain at least 10 characters')
+  }
     if (campoImage.value == "") {
       errors.push("Image field cannot be empty");
     } else {
@@ -62,7 +68,7 @@ window.addEventListener("load", function () {
     if (errors.length > 0) {
       event.preventDefault();
       for (i = 0; i < errors.length; i++) {
-        errores.innerHTML += "<li> " + errors[i] + "</li>";
+        errores.innerHTML += "<li> " + errors[i] + alert (errors[i]) + "</li>";
       }
     }
   });
