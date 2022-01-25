@@ -54,13 +54,16 @@
         <label for="password"> Password</label><br /><input
           type="password"
           name="password"
-          id="pasword"
+          id="password_val"
           placeholder="Insert your password"
           value="<%= locals.old && old.password %>"
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+          required
         />
         <% if (locals.errors && errors.password) { %>
         <p class="feedback"><%= errors.password.msg %></p>
-        <% } %>
+        <% } % >
       </div>
 
       <div class="caja">
