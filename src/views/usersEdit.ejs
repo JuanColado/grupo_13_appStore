@@ -6,48 +6,34 @@
     <%- include('./partials/header') %>
 
 
-    <form action="/users/usersEdit?_method=PUT" method="POST" enctype="multipart/form-data">
+    <form action="/users/<%= User.id %>/usersEdit?_method=PUT" method="POST" enctype="multipart/form-data">
         <h4><i class="far fa-edit"></i>Edit profile:
             </br>
-            <%= item.first_name %> <%= item.last_name %></h4>
+           
         <div class="caja">
-            <label for="NombreUsuario"> First name: </label><br><input type="text" name="first_name"
-                placeholder="<%= item.first_name %>">
+            <label for="NombreUsuario"> First name: </label><br><input type="text" name="first_name" value="<%= User.first_name
+            %>">
         </div>
         <div class="caja">
-            <label for="ApellidoUsuario"> Last name: </label><br><input type="text" name="last_name"
-                placeholder="<%= item.last_name %>">
+            <label for="ApellidoUsuario"> Last name: </label><br><input type="text" class = "last_name_val" name="last_name" value="<%= User.last_name
+             %>"  >
         </div>
         <div class="caja">
-            <label for="EmailUsuario"> E-mail: </label><br><input type="email" name="email"
-                placeholder="<%= item.email %>">
+            <label for="EmailUsuario"> E-mail: </label><br><input type="email" class ="email_val" name="email" value="<%= User.email %>" >
             <div class="caja">
-                <label> Profile image: </label> <input type="file" name="image" accept=".jpg, .jpeg, .png">
+                <label> Profile image: </label> <input type="file" class = "image_val" name="image" accept=".jpg, .jpeg, .png" value="<%= User.image
+                %>"> 
             </div>
         </div>
-        <div class="caja">
-            <label for="ContraUsuario">Password: </label><br><input type="password" name="password">
-        </div>
-        <div class="caja">
-            <label for="ContraUsuario">New Password: </label><br><input type="password" name="password">
-        </div>
-        <div class="caja">
-            <label for="ContraUsuario">Repet Password: </label><br><input type="password" name="password">
-        </div>
-
-
-
-
-
+        
         </select> </div>
-
         <div>
-            <input class="botonEditProduct" type="submit" value="Edit product"></div>
+            <input class="botonEditProduct" type="submit" value="Edit profile"></div>
     </form>
 
-    <form action="/users/<%= item.id %>?_method=DELETE" method="POST">
+    <form action="/users/<%= User.id %>/deleteusers?_method=DELETE" method="POST">
         <div>
-            <input class="botonEditProduct" type="submit" value="Delete product"></div>
+            <input class="botonEditProduct" type="submit" value="Delete profile"></div>
     </form>
 
     <%- include('./partials/footer') %>

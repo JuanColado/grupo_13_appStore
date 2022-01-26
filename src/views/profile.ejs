@@ -6,13 +6,13 @@
        
       <div class="producto">
         <div class="fotoProducto">
-          <img src='/img/users/<%=user.image%>' alt = <%=user.first_name%>>
+          <img src='/img/users/<%=User.image%>' alt = <%=User.first_name%>>
         </div> 
         <div class="tituloProducto">
-            <h1 class="modelo"> Hello <%=user.first_name%>  <%=user.last_name%> </h1>
+            <h1 class="modelo"> Hello <%=User.first_name%>  <%=User.last_name%> </h1>
           </div>
       <div class="Precio">
-        <label class="precio" name="email">Email</label>  <%=user.email%>
+        <label class="precio" name="email">Email</label>  <%=User.email%>
         </span>
         </div>
     
@@ -21,6 +21,10 @@
 <div class="BotonDetail">    
  <button type="subtmit" class="VolverHome" value="VolverHome"><i class="fas fa-home"></i><a href="index">Back to home</a></button>           
 </div> </div> 
+<div class="BotonDetail">    
+  <button type="subtmit" class="VolverHome" value="VolverHome"><i class="far fa-edit"></i><a href="users/usersEdit">Edit profile</a></button>           
+ </div> </div>
+ 
 <%- include('./partials/footer') %>
 </body>
 </html>

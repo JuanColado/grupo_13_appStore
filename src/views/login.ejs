@@ -4,6 +4,7 @@
 
   <body>
     <%- include('./partials/header') %>
+    <ul class="errores"></ul>
       <form class="formulario" action="/users/login" method="POST">
         <h4>Log in: </h4>
         <section class="login">
@@ -17,14 +18,14 @@
                   <% } %>
               </ul>
               <% } %>
-                <li> <input type="text" placeholder="Email" name="email" value="<%= locals.old && old.email %>">
+                <li> <input id="email_val" type="text" placeholder="Email" name="email" value="<%= locals.old && old.email %>">
                   <% if (locals.errors && errors.email) { %>
                 </li>
                 <p class="feedback">
                   <%= errors.email.msg %>
                 </p>
                 <% } %>
-                  <li><input type="password" placeholder="Password" name="password"
+                  <li><input  id="password_val" type="password" placeholder="Password" name="password"
                       value="<%= locals.old && old.password %>">
                     <% if (locals.errors && errors.password) { %>
                   </li>

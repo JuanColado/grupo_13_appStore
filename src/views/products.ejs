@@ -2,30 +2,33 @@
 <html lang="es">
 
 <%- include('./partials/head') %>
+
 <body>
   <%- include('./partials/header') %>
-    
-    <main>
-            <div class="titulo">
-                <h1>All products </h1>
-            </div>
 
-<% for(let i = 0; i < products.length; i++){ %>
-  <li>
-    <div class="card col-11 position-relative">
-      <img class="card-img-top" src= 'img/<%= products[i].product_image%>' alt=<%=products[i].product_name%>>
-      <div class="card-body position-absolute titulo-juegos d-flex align-content-center">
-        <h4 class="card-title flex-grow-1"><%=products[i].product_name%></h4>
-        <p class="card-text">
-          <%= products[i].product_price %>
-        </p>
-        <a href="/products/productDetail/<%= products[i].product_id %>" class="stretched-link"></a>
-      </div>
-    </div>
-    </li>
-    <% } %>
+  <main>
+
+    <ul class='products-ul-card'>
+      <% for(let i = 0; i < products.length; i++){ %>
+
+      <li class='products-li-card'>
+        <div class="card col-11 position-relative">
+          <img class="card-img-top" src='img/<%= products[i].product_image%>' alt=<%=products[i].product_name%>>
+          <div class="card-body position-absolute titulo-juegos d-flex align-content-center">
+            <h4 class="card-title flex-grow-1"><%=products[i].product_name%></h4>
+            <p class="card-text">
+              <%= products[i].product_price %>
+            </p>
+            <a href="/products/productDetail/<%= products[i].product_id %>" class="stretched-link"></a>
+          </div>
+        </div>
+      </li>
+
+      <% } %>
+    </ul>
   </main>
-    <%- include('./partials/footer') %>
+  <%- include('./partials/footer') %>
+
 </body>
 
 </html>
