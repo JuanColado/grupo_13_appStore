@@ -8,6 +8,16 @@ body {
     background: #606c88;
 }
 
+.products-li-card{
+    width: 400px;
+    margin-top: 110px;
+}
+
+.products-ul-card{
+display: flex;
+flex-wrap: wrap;
+list-style:none;
+}
 
 
 .contenedor-main {
