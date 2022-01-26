@@ -8,6 +8,9 @@ const productsRouter =  require ('../src/routes/productsRouter');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const userLogueado = require('../src/middlewares/userLoggedMiddleware');
+const productsApiRouter = require('./routes/API/productsApiRouter');
+const categoryApiRouter = require('./routes/API/categoryApiRouter');
+const usersApiRouter = require('./routes/API/productsApiRouter');
 
 app.use(express.urlencoded({extended: false}));
 app.use(session({resave: false ,secret: "AppStore!!", saveUninitialized: false}))
@@ -28,6 +31,12 @@ app.use("/", mainRouter);
 app.use("/users", usersRouter);
 
 app.use("/products", productsRouter);
+
+//API ROUTES
+
+app.use ('/api', productsApiRouter);
+
+
 
 app.use((req,res,next)=> {
     res.status(404).render('404-page');
