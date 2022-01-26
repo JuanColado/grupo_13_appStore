@@ -6,6 +6,7 @@ const bcrypt = require("bcryptjs");
 const { validationResult } = require("express-validator");
 const User = require('../model/User.js')
 const salt = bcrypt.genSaltSync(10);
+const db = require("../../database/models")
 
 const usersController = {
   login: (req, res) => res.render("login"),
@@ -44,22 +45,70 @@ const usersController = {
 
   register: (req, res) => res.render("register"),
   //Crea nuevo usuario//
-  newUser: (req, res) => {
-    let errors = validationResult(req);
-    if (errors.isEmpty()) {
-      let newUser = {
-        id: users[users.length - 1].id + 1,
-        ...req.body,
-        image: req.file ? req.file.filename : "img/default.png",
-        password: bcrypt.hashSync(req.body.password, 10),
-      };
-      users.push(newUser);
-      fs.writeFileSync(usersFilePath, JSON.stringify(users));
-      res.redirect("/users/profile");
-    } else {
-      res.render("register", { errors: errors.mapped(), old: req.body });
+  // newUser: (req, res) => {
+  //   let errors = validationResult(req);
+  //   if (errors.isEmpty()) {
+  //     let newUser = {
+  //       id: users[users.length - 1].id + 1,
+  //       ...req.body,
+  //       image: req.file ? req.file.filename : "img/default.png",
+  //       password: bcrypt.hashSync(req.body.password, 10),
+  //     };
+  //     users.push(newUser);
+  //     fs.writeFileSync(usersFilePath, JSON.stringify(users));
+  //     res.redirect("/users/profile");
+  //   } else {
+  //     res.render("register", { errors: errors.mapped(), old: req.body });
+  //   }
+  // },
+
+
+
+  newUser: function (req, res) {
+    const resultValidation = validationResult(req);
+
+    if (resultValidation.errors.length > 0) {
+      return res.render("/users/register", {
+        errors: resultValidation.mapped(),
+        oldData: req.body,
+      });
     }
-  },
+
+     db.Users.findOne({
+        where: {
+          email: req.body.email,
+        },
+      })
+      .then((user) => {
+        if (user) {
+          res.render("/users/register", {
+            errors: {
+              email: {
+                msg: "Este Email ya se encuentra registrado",
+              },
+            },
+          });
+        }
+      })
+      .catch((err) => console.log(err));
+
+
+      db.Users.create( 
+          {
+              first_name: req.body.first_name,
+              last_name: req.body.last_name,
+              email: req.body.email,
+              password: bcrypt.hashSync(req.body.password, 10),
+              image:req.file?req.file.filename:'img/default.png',
+              user_category_id: 2,
+  
+          })
+        
+      .then(()=> {
+          return res.redirect('/profile')})
+      
+    },
+    
  
   //Muestra un  usuario para editarlo//
   editUsers: (req, res) => {
@@ -108,3 +157,4 @@ const usersController = {
   },
 };
 module.exports = usersController;
+
