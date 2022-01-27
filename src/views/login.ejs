@@ -18,14 +18,14 @@
                   <% } %>
               </ul>
               <% } %>
-                <li> <input id="email_val" type="text" placeholder="Email" name="email" value="<%= locals.old && old.email %>">
+                <li> <input class="register"  id="email_val" type="text" placeholder="Email" name="email" value="<%= locals.old && old.email %>">
                   <% if (locals.errors && errors.email) { %>
                 </li>
                 <p class="feedback">
                   <%= errors.email.msg %>
                 </p>
                 <% } %>
-                  <li><input  id="password_val" type="password" placeholder="Password" name="password"
+                  <li><input class="register"  id="password_val" type="password" placeholder="Password" name="password"
                       value="<%= locals.old && old.password %>">
                     <% if (locals.errors && errors.password) { %>
                   </li>
@@ -36,7 +36,7 @@
                   <li><div class="rememberme"><input class = "checkbox" type="checkbox" value="rememberme" name="rememberme"><p class="remember">Rememberme</p></div></li>
                   <li><input type="submit" value="Login" class="boton"></li>
           </ul>
-          <a href="register" class="registro">Register</a>
+          <a href="/users/register" class="registro">Register</a>
           <a href="forgot" class="registro">¿Forgot your password?</a>
         </section>
       </form>

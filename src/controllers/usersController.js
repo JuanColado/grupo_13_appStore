@@ -51,7 +51,7 @@ const usersController = {
         delete userInDB.password;
         // req.session.user = userInDB;
         req.session.user = userInDB[0].dataValues;
-        if(req.body.Login_RememberMe){
+        if(req.body.rememberme){
             res.cookie('rememberme', req.body.email, {maxAge: (1000 * 60) * 60})
         }
         /* Promise.all(promUser)

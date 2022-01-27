@@ -4,6 +4,7 @@ const fs = require("fs");
 const { validationResult } = require("express-validator");
 //const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const db = require("../../database/models");
+const { url } = require("inspector");
 
 const productsController = {
   productCart: (req, res) => res.render("productCart"),
@@ -116,7 +117,7 @@ const productsController = {
         product_price: req.body.product_price,
         product_category: req.body.product_category,
         product_description: req.body.product_description,
-        product_image: req.file.filename,
+        product_image: req.file?req.file.filename:'default.png',
       },
       {
         where: { id: productId },
