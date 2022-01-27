@@ -64,7 +64,7 @@ const productsController = {
     let promProduct_category = db.Product_category.findAll();
     Promise.all([promProduct, promProduct_category])
       .then(([Product, allProduct_category]) => {
-        return res.render("productDetail", { Product, allProduct_category });
+        return res.render("productDetail", { Product, allProduct_category,  });
       })
       .catch((error) => res.send(error));
 

@@ -3,11 +3,11 @@
 
 <%- include('./partials/head') %>
 
-<body>
+<body class="snow">
   <%- include('./partials/header') %>
 
   <main>
-
+<h4 class = "h4-product"> Main Products:</h4>
     <ul class='products-ul-card'>
       <% for(let i = 0; i < products.length; i++){ %>
 
@@ -19,7 +19,7 @@
             <p class="card-text">
               <%= products[i].product_price %>
             </p>
-            <a href="/products/productDetail/<%= products[i].product_id %>" class="stretched-link"></a>
+            <a href="/products/productDetail/<%= products[i].id %>" class="stretched-link"></a>
           </div>
         </div>
       </li>
