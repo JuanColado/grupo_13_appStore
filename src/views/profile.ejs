@@ -2,28 +2,54 @@
 <html lang="es"></html>
     <%- include('./partials/head') %>
     <body>
-      <%- include('./partials/header') %>
-       
-      <div class="producto">
-        <div class="fotoProducto">
-          <img src='/img/users/<%=User.image%>' alt = <%=User.first_name%>>
-        </div> 
-        <div class="tituloProducto">
-            <h1 class="modelo"> Hello <%=User.first_name%>  <%=User.last_name%> </h1>
-          </div>
-      <div class="Precio">
-        <label class="precio" name="email">Email</label>  <%=User.email%>
-        </span>
-        </div>
+      <%- include('./partials/header') %>   
     
+<div id="container">	
+	
+  <!-- Start	Product details -->
+    <div class="product-details">
+      
+      <!-- 	Product Name -->
+    <h1> HELLO <%= User.first_name %> <%= User.last_name %></h1>
+
+    
+    
+    <p class="information">
+        <li><strong> Email</label>  <%=User.email%>
+        </strong></li>
+      
+ <!-- 		Control -->
+ <div class="control">
+        
+  <!-- Start Button buying -->
+    <button class="btn">
+
+  
+  </div>
+        
+  </div>
+    
+  <!-- 	Start product image & Information -->    
+  <div class="product-image">  
+    <img src='/img/users/<%=User.image%>' alt = <%=User.first_name%>>
+  <!-- 	product Information-->
+  <div class="info">
+   <strong> Hello <div class="descripcionproducto">  <%= User.first_name%> </div>
+      </strong>
+  </div>
+  </div>
+  <!--  End product image  -->
+
+</div>
+<div class="formulario"> <button type="subtmit" class="boton" value="VolverHome"><i class="fas fa-edit"></i><a href="users/usersEdit"> Edit profile</a></button>           
+</div> 
+<div class="formulario"> <button type="subtmit" class="boton" value="VolverHome"><i class="fas fa-home"></i><a href="index"> Back to home</a></button>           
+</div> 
 
 
-<div class="BotonDetail">    
- <button type="subtmit" class="VolverHome" value="VolverHome"><i class="fas fa-home"></i><a href="index">Back to home</a></button>           
-</div> </div> 
-<div class="BotonDetail">    
-  <button type="subtmit" class="VolverHome" value="VolverHome"><i class="far fa-edit"></i><a href="users/usersEdit">Edit profile</a></button>           
- </div> </div>
+
+
+</div> 
  
 <%- include('./partials/footer') %>
 </body>

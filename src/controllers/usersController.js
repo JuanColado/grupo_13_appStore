@@ -99,15 +99,6 @@ register: (req, res) => res.render("register"),
 
   //Crea nuevo usuario//
  newUser: function (req, res) {
-    const resultValidation = validationResult(req);
-
-    if (resultValidation.errors.length > 0) {
-      return res.render("register", {
-        errors: resultValidation.mapped(),
-        oldData: req.body,
-      });
-    }
-
      let userInDB = db.User.findOne({
         where: {
           email: req.body.email,

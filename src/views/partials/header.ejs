@@ -16,27 +16,27 @@
                 <%if (locals.User) {%> 
                 <ul class="navbar-nav container justify-content-around flex-nowrap aling-self-end">
                     <li class="nav-item active"><a href="index" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Store</a></li>
+                    <li class="nav-item"><a href="../products" class="nav-link">Store</a></li>
                     <li class="nav-item"><a href="" class="nav-link">Sales</a></li>
                     <li class="nav-item"><a href="/users/logOut" class="nav-link">Log Out</a></li>
                     <h6>Hi <%=locals.User.first_name%></h6>
                     <% } else{ %> 
                         <ul class="navbar-nav container justify-content-around flex-nowrap">
                             <li class="nav-item active"><a href="index" class="nav-link">Home</a></li>
-                            <li class="nav-item"><a href="" class="nav-link">Tienda</a></li>
-                            <li class="nav-item"><a href="" class="nav-link">Ofertas</a></li>
+                            <li class="nav-item"><a href="../products" class="nav-link">Store</a></li>
+                            <li class="nav-item"><a href="" class="nav-link">Sales</a></li>
                             
                     <li class="nav-item separa"><a href="users/register" class="nav-link">
                             <!-- <lord-icon src="https://cdn.lordicon.com/tdvuekwf.json" trigger="hover"
                                 colors="primary:#ffffff,secondary:#fdd900" class="lordicon"> -->
                              
-                            </lord-icon>Registrarme
+                            </lord-icon>Register
                         </a>
                     </li>
                     <li class="nav-item"><a href="users/login" class="nav-link">
                            <!--  <lord-icon src="https://cdn.lordicon.com/zczmziog.json" trigger="hover"
                                 colors="primary:#ffffff,secondary:#fdd900" class="lordicon"> -->
-                            </lord-icon>Ingresar
+                            </lord-icon>Log in
                         </a></li>
                 </ul>
             </div>

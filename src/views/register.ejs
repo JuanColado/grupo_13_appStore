@@ -11,9 +11,9 @@
       method="POST"
       enctype="multipart/form-data"
     >
-      <h4>Crea una cuenta:</h4>
+      <h4>Create your account:</h4>
       <div class="caja">
-        <label for="NombreApellido"> First Name </label><br /><input
+        <label for="NombreApellido"> First Name </label><br /><input class="register" 
           id="first_name_val"
           type="text"
           name="first_name"
@@ -25,7 +25,7 @@
         <% } %>
       </div>
       <div class="caja">
-        <label for="NombreApellido"> Last Name </label><br /><input
+        <label for="NombreApellido"> Last Name </label><br /><input class="register" 
           type="text"
           id="last_name_val"
           name="last_name"
@@ -38,7 +38,7 @@
       </div>
 
       <div class="caja">
-        <label for="Email">Email</label><br /><input
+        <label for="Email">Email</label><br /><input class="register" 
           type="email"
           id="email_val"
           name="email"
@@ -51,7 +51,7 @@
         <% } %>
       </div>
       <div class="caja">
-        <label for="password"> Password</label><br /><input
+        <label for="password"> Password</label><br /><input class="register"
           type="password"
           name="password"
           id="password_val"
@@ -64,8 +64,9 @@
       </div>
 
       <div class="caja">
-        <label> Profile image: </label>
-        <input
+        <label> Profile image: </label> 
+        <br>
+        <input class="register" 
           type="file"
           id="image_val"
           name="image"

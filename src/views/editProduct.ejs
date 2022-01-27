@@ -6,32 +6,33 @@
     <%- include('./partials/header') %>
 
 
-    <form action="/products/<%= Product.id %>/edit?_method=PUT" method="POST" enctype="multipart/form-data">
+    <form action="/products/<%= Product.id %>/edit?_method=PUT" method="POST" enctype="multipart/form-data" class="formulario">
         <h4><i class="far fa-edit"></i>Edit product:
             </br>
-            <%= Product.name %></h4>
+            <%= Product.product_name %></h4><br>
         <div class="caja">
-            <label for="NombreProducto"> Product name: </label><br><input type="text" name="product_name"
+            <label for="NombreProducto"> Product name: </label><br><input type="text"  class="register" name="product_name"
                 value="<%= Product.product_name %>">
-        </div>
+        </div><br>
         <div class="caja">
-            <label for="precio">Product price:</label><br><input type="text" name="product_price" id="price"
+            <label for="precio">Product price:</label><br><input type="text" class="register" name="product_price" id="price"
                 value=" <%= Product.product_price%>">
-        </div>
+        </div><br>
         <div class="caja">
-            <label> Product image: </label> <input type="file" name="product_image" accept=".jpg, .jpeg, .png">>
-        </div>
+            <label> Product image: </label> <br><input type="file" name="product_image" class="register"  accept=".jpg, .jpeg, .png">>
+        </div><br>
         <div class="caja"> <label for="Stock" class="Stock" name="Stock"></label>Stock:
             <br>
             <select class="StockDisponible">
                 <option value="Disponible" selected>Available</option>
                 <option value="No Disponible">Unavailable</option>
-            </select></label> </div>
+            </select></label> </div><br>
         <div class="caja">
             <label for="DescripcionProducto"> Product description:</label><br><textarea class='cajaDescripcion'
                 name="product_description" > <%= Product.product_description %> </textarea>
         </div>
-        <label for="product_category">Category: </label>
+        <div class="caja">
+        <label for="product_category">Category: </label><br>
       
                 <select name="product_category" class="StockDisponible" id="" required>
                     <% allProduct_category.forEach(product_category => { %>
@@ -39,14 +40,13 @@
                     <% }); %>
                 </select>
 
-
+</div>
         </select> </div>
-
+        <br>
         <div>
             <input class="botonEditProduct" type="submit" value="Edit product"></div>
     </form>
-
-    <form action="/products/<%= Product.id %>?_method=DELETE" method="POST">
+    <form action="/products/<%= Product.id %>?_method=DELETE" method="POST" class="formulario botonborrar">
         <div>
             <input class="botonEditProduct" type="submit" value="Delete product"></div>
     </form>
