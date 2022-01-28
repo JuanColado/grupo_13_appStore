@@ -182,7 +182,7 @@ body {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(4, minmax(100px, 1fr));
-    grid-template-rows: repeat(4, minmax(130px, 10vw)) repeat(30, minmax(100px, 6vw));
+    grid-template-rows: repeat(4, minmax(130px, 10vw)) repeat(6, minmax(100px, 6vw));
     grid-gap: 4px;
   }
   

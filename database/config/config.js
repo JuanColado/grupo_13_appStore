@@ -1,14 +1,14 @@
 module.exports = {
   "development": {
     "username": "root",
-    "password": "marti123",
+    "password": null,
     "database": "appStore",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "marti123",
+    "password": null,
     "database": "appStore",
     "host": "127.0.0.1",
     "dialect": "mysql"
